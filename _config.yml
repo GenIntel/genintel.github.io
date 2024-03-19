@@ -1,0 +1,44 @@
+# Basic Information 
+title: Generative and Robust AI
+affiliation: University of Freiburg and Max-Planck-Institute for Informatics
+affiliation_link: https://gvrl.mpi-inf.mpg.de
+
+# Search Engine Optimization (SEO)
+# The following information is used to improve the website traffic from search engines, e.g., Google.
+keywords: Generative and Robust AI
+description: Our group investigates foundational research problems that enable AI systems to become a safe, secure and human understandable component of our everyday lives. Our working hypothesis is that AI models need to develop a causal generative understanding of our world to become robust. Our research integrates aspects from Machine Learning, Visual Computing, and Computer Security.
+canonical: https://Arturjssln.github.io/
+
+# Links 
+# If you don't need one of them, you may delete the corresponding line.
+# google_scholar: https://scholar.google.com/citations?hl=en&user=fRT8Eg4AAAAJ
+# cv_link: assets/files/CV.pdf
+# github_link: https://github.com/Arturjssln
+# linkedin: https://www.linkedin.com/in/arturjssln/
+# twitter: https://twitter.com/AJesslen
+
+# Images (e.g., your profile picture and your website's favicon) 
+# "favicon" and "favicon_dark" are used for the light and dark modes, respectively. 
+avatar: ./assets/img/avatar.png # TODO: change
+favicon: ./assets/img/favicon.png # TODO: change
+favicon_dark: ./assets/img/favicon-dark.png # TODO: change
+
+# Footnote
+# You may use the option to disable the footnote, "Powered by Jekyll and Minimal Light theme."
+enable_footnote: false
+
+# Google Analytics ID
+# Please remove this if you don't use Google Analytics
+# google_analytics: UA-111540567-4
+
+# Use this project as a remote theme for GitHub Pages
+# See the guide here: https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/adding-a-theme-to-your-github-pages-site-using-jekyll
+remote_theme: yaoyao-liu/minimal-light
+
+# The following files will be removed from the generated website.
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - LICENSE
+  - minimal-light.gemspec
