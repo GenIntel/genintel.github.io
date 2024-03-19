@@ -1,14 +1,3 @@
-
-.horizontal-slider {
-  width: 100%;
-}
-
-.vertical-slider {
-  writing-mode: bt-lr; /* Bottom-to-top, left-to-right */
-  transform: rotate(-90deg) translateX(-100%); /* Rotate slider to be horizontal */
-  transform-origin: top left;
-}
-
 /*.croppable-image*/
 .grid-image-and-sliders{
   display: grid;
@@ -18,16 +7,26 @@
 }
 
 .grid-image-container {
-  height: auto;
-  width: 100%;
   overflow: hidden;
-  position: relative;
 }
 
 .grid-image {
   max-width: none;
   max-height: none;
 
-  height: auto;
   overflow: hidden;
+  width: 400%;
 }
+
+
+.vertical-slider {
+  writing-mode: bt-lr; /* Bottom-to-top, left-to-right */
+  transform: rotate(-90deg) translateX(-100%); /* Rotate slider to be horizontal */
+  transform-origin: top left;
+}
+
+.horizontal-slider {
+  width: 100%;
+}
+
+

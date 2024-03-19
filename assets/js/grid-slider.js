@@ -17,6 +17,9 @@ function initializeImageCropping(container) {
   var offsetWidth = parseInt(horizontalSlider.height);
   var offsetHeight = parseInt(imageContainer.style.height);
 
+  console.log("horizontal Slider height", offsetWidth);
+  console.log("image Container height", offsetHeight);
+
   verticalSlider.style.width = offsetHeight + 'px';
   verticalSlider.style.height = offsetWidth + 'px';
   //await new Promise(r => setTimeout(r, 1000));
@@ -38,32 +41,41 @@ function initializeImageCropping(container) {
     console.log(verticalValueMin, verticalValueMax);
 
     // Calculate the new width of the image
+    var scale = (parseInt(horizontalSlider.max) + 1.);
+
+    var imageHeight = (parseInt(imageContainer.offsetWidth)) * (image.naturalHeight/image.naturalWidth) + 'px';
+    console.log("imageContainer.offsetWidth", imageHeight);
+    imageContainer.style.height = imageHeight;
+
     image.style.cssText = `clip-path: polygon(${horizontalValueMin}% ${verticalValueMin}%, ${horizontalValueMax}% ${verticalValueMin}%, ${horizontalValueMax}% ${verticalValueMax}%, ${horizontalValueMin}% ${verticalValueMax}%);`;
     image.style.transform = `translate(-${horizontalValueMin}%, -${verticalValueMin}%)`; // You can adjust the percentage values as per your requirement
-
-    var scale = (parseInt(horizontalSlider.max) + 1.);
     image.style.width = scale * 100 + '%';
-    console.log(image.naturalHeight);
-    console.log(image.naturalWidth);
-    console.log(parseInt(image.width));
-    console.log(parseInt(imageContainer.offsetWidth));
-    var imageHeight = (parseInt(imageContainer.offsetWidth)) * (image.naturalHeight/image.naturalWidth) + 'px';
-    console.log(imageHeight);
-    imageContainer.style.height = imageHeight;
+    console.log("image.naturalHeight", image.naturalHeight);
+    console.log("image.naturalWidth", image.naturalWidth);
+    console.log("image.width", parseInt(image.width));
+    console.log("image.width", parseInt(image.width));
+
+    console.log("imageContainer.offsetWidth", parseInt(imageContainer.offsetWidth));
+
+    container.style.gridTemplateColumns = "auto auto";
+
+
   }
 
 
 }
+
 
 console.log('initialize');
 
 // Get all image cropping containers
 const imageCroppingContainers = document.querySelectorAll('.grid-image-and-sliders');
 
-// Initialize image cropping functionality for each container
 imageCroppingContainers.forEach(container => {
   initializeImageCropping(container);
 });
+
+
 
 //
 //const imageVerticalSliderContainers = document.querySelectorAll('.vertical-slider-container');
