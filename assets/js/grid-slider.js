@@ -15,13 +15,16 @@ function initializeImageCropping(container) {
 
   //await new Promise(r => setTimeout(r, 1000));
   var offsetWidth = parseInt(horizontalSlider.height);
-  var offsetHeight = parseInt(imageContainer.style.height);
+  var offsetHeight = 0.9 * parseInt(imageContainer.style.height);
 
   console.log("horizontal Slider height", offsetWidth);
   console.log("image Container height", offsetHeight);
 
   verticalSlider.style.width = offsetHeight + 'px';
-  verticalSlider.style.height = offsetWidth + 'px';
+  //verticalSlider.style.height = offsetWidth + 'px';
+
+  //container.style.gridTemplateColumns = "auto auto";
+  //container.style.display = "grid";
   //await new Promise(r => setTimeout(r, 1000));
 
   // Add event listeners to the sliders
@@ -46,6 +49,7 @@ function initializeImageCropping(container) {
     var imageHeight = (parseInt(imageContainer.offsetWidth)) * (image.naturalHeight/image.naturalWidth) + 'px';
     console.log("imageContainer.offsetWidth", imageHeight);
     imageContainer.style.height = imageHeight;
+    imageContainer.style.width = imageHeight;
 
     image.style.cssText = `clip-path: polygon(${horizontalValueMin}% ${verticalValueMin}%, ${horizontalValueMax}% ${verticalValueMin}%, ${horizontalValueMax}% ${verticalValueMax}%, ${horizontalValueMin}% ${verticalValueMax}%);`;
     image.style.transform = `translate(-${horizontalValueMin}%, -${verticalValueMin}%)`; // You can adjust the percentage values as per your requirement
@@ -56,9 +60,6 @@ function initializeImageCropping(container) {
     console.log("image.width", parseInt(image.width));
 
     console.log("imageContainer.offsetWidth", parseInt(imageContainer.offsetWidth));
-
-    container.style.gridTemplateColumns = "auto auto";
-
 
   }
 

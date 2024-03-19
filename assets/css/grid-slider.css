@@ -1,9 +1,10 @@
 /*.croppable-image*/
 .grid-image-and-sliders{
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: 5fr 1fr;
   height: auto;
   width: 50%;
+  text-align:center;
 }
 
 .grid-image-container {
@@ -23,10 +24,12 @@
   writing-mode: bt-lr; /* Bottom-to-top, left-to-right */
   transform: rotate(-90deg) translateX(-100%); /* Rotate slider to be horizontal */
   transform-origin: top left;
+  width: 0px;
+  height: 0px;
 }
 
 .horizontal-slider {
-  width: 100%;
+  width: 90%;
 }
 
 
