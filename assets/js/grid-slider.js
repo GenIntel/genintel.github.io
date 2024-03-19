@@ -14,8 +14,8 @@ function initializeImageCropping(container) {
   console.log(verticalSliderContainer.clientHeight);
 
   //await new Promise(r => setTimeout(r, 1000));
-  var offsetWidth = parseInt(horizontalSlider.height);;
-  var offsetHeight = parseInt(verticalSliderContainer.offsetHeight);
+  var offsetWidth = parseInt(horizontalSlider.height);
+  var offsetHeight = parseInt(imageContainer.style.height);
 
   verticalSlider.style.width = offsetHeight + 'px';
   verticalSlider.style.height = offsetWidth + 'px';
