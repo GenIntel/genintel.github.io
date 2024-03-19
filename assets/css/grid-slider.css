@@ -1,0 +1,7 @@
+
+.horizontal-slider {
+  writing-mode: bt-lr; /* Bottom-to-top, left-to-right */
+  transform: rotate(-90deg); /* Rotate slider to be horizontal */
+  width: 150px; /* Adjust width as needed */
+  height: 20px; /* Adjust height as needed */
+}
