@@ -1,10 +1,11 @@
 // Function to initialize image cropping functionality for a given container
 function initializeImageCropping(container) {
+
+  console.log('initialize image ');
   const image = container.querySelector('.croppable-image');
   const horizontalSlider = container.querySelector('.horizontal-slider');
   const verticalSlider = container.querySelector('.vertical-slider');
 
-  console.log('initialize image ');
 
   // Add event listeners to the sliders
   horizontalSlider.addEventListener('input', updateCrop);

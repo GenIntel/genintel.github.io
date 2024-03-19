@@ -40,7 +40,7 @@
     <script src="assets/js/bulma-carousel.min.js"></script>
     <script src="assets/js/bulma-slider.min.js"></script>
     <script src="assets/js/projects.js"></script>
-    <script src="assets/js/grid-slider.js"></script>
+    <script defer src="assets/js/grid-slider.js"></script>
 </head>
 <body>
   <section class="hero">
@@ -155,16 +155,17 @@
 {% if page.img_grid1 %}
 <div class="image-cropping-container">
     <div class="container">
-      <div class="image-container">
-        <img class="croppable-image" src="{{ page.img_grid1 }}" alt="MY ALT TEXT">
-      </div>
-      <div class="controls">
+    <div class="image-container">
+      <img class="croppable-image" src="{{ page.img_grid1 }}" alt="MY ALT TEXT">
+      <div class="horizontal-slider-container">
         <input type="range" class="horizontal-slider slider" min="0" max="3" value="2">
-        <input type="range" class="vertical-slider slider" min="0" max="3" value="2">
       </div>
     </div>
+    <div class="controls">
+      <input type="range" class="vertical-slider slider" min="0" max="3" value="2">
+    </div>
+    </div>
 </div>
-
 {% endif %}
 
 <!-- Image carousel -->
