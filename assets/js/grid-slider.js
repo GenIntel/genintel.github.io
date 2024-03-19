@@ -10,8 +10,12 @@ function initializeImageCropping(container) {
 
   // Function to update image crop based on slider values
   function updateCrop() {
+
     const horizontalValue = horizontalSlider.value / 3 * 100;
     const verticalValue = verticalSlider.value / 3 * 100;
+
+    console.log(horizontalValue);
+    console.log(verticalValue);
 
     // Calculate crop percentages
     const horizontalCrop = `left: ${horizontalValue}%`;
