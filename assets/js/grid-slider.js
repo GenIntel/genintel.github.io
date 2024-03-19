@@ -4,6 +4,8 @@ function initializeImageCropping(container) {
   const horizontalSlider = container.querySelector('.horizontal-slider');
   const verticalSlider = container.querySelector('.vertical-slider');
 
+  console.log('initialize image ');
+
   // Add event listeners to the sliders
   horizontalSlider.addEventListener('input', updateCrop);
   verticalSlider.addEventListener('input', updateCrop);
@@ -25,6 +27,8 @@ function initializeImageCropping(container) {
     image.style.cssText = `clip-path: polygon(${horizontalCrop} ${verticalCrop}, 100% ${verticalCrop}, 100% 100%, ${horizontalCrop} 100%);`;
   }
 }
+
+console.log('initialize');
 
 // Get all image cropping containers
 const imageCroppingContainers = document.querySelectorAll('.image-cropping-container');
