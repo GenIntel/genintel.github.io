@@ -1,7 +1,7 @@
 
 .grid-image-and-sliders{
   display: grid;
-  grid-template-columns: 5fr 1fr;
+  grid-template-columns: 10fr 1fr;
   height: auto;
   width: 100%;
   text-align:center;

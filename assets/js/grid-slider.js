@@ -7,11 +7,11 @@ function initializeImageCropping(container) {
 
   const horizontalSlider = container.querySelector('.horizontal-slider');
   const verticalSlider = container.querySelector('.vertical-slider');
-  const verticalSliderContainer = container.querySelector('.vertical-slider-container');
+  //const verticalSliderContainer = container.querySelector('.vertical-slider-container');
 
   updateCrop();
 
-  console.log(verticalSliderContainer.clientHeight);
+  //console.log(verticalSliderContainer.clientHeight);
 
   //await new Promise(r => setTimeout(r, 1000));
   var offsetWidth = parseInt(horizontalSlider.height);
