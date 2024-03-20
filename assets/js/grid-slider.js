@@ -7,7 +7,7 @@ function initializeImageCropping(container) {
 
   const horizontalSlider = container.querySelector('.horizontal-slider');
   const verticalSlider = container.querySelector('.vertical-slider');
-  //const verticalSliderContainer = container.querySelector('.vertical-slider-container');
+  const verticalSliderContainer = container.querySelector('.vertical-slider-container');
 
   updateCrop();
 
@@ -15,24 +15,34 @@ function initializeImageCropping(container) {
 
   //await new Promise(r => setTimeout(r, 1000));
   var offsetWidth = parseInt(horizontalSlider.height);
-  var offsetHeight = 0.9 * parseInt(imageContainer.style.height);
+  var offsetHeight = 0.9 * parseInt(imageContainer.height);
 
-  console.log("horizontal Slider height", offsetWidth);
-  console.log("image Container height", offsetHeight);
+  //console.log("horizontal Slider height", offsetWidth);
+  //console.log("image Container height", offsetHeight);
 
-  verticalSlider.style.width = offsetHeight + 'px';
-  //verticalSlider.style.height = offsetWidth + 'px';
+  console.log("vertical slider Container height", verticalSliderContainer.offsetHeight);
+  console.log("vertical slider Container width", verticalSliderContainer.offsetWidth);
 
-  //container.style.gridTemplateColumns = "auto auto";
-  //container.style.display = "grid";
-  //await new Promise(r => setTimeout(r, 1000));
+  //verticalSlider.style.width = parseInt(verticalSliderContainer.offsetHeight) + 'px';
+  //verticalSlider.style.height = parseInt(verticalSliderContainer.offsetWidth) + 'px';
 
   // Add event listeners to the sliders
   horizontalSlider.addEventListener('input', updateCrop);
   verticalSlider.addEventListener('input', updateCrop);
 
+// Listen to the window's size changes
+  //verticalSliderContainer.addEventListener('onload', checkForChanges);
+
+    //  function checkForChanges() {
+    //    console.log("verticalSliderContainer resize event");
+    //    verticalSlider.style.width = verticalSliderContainer.offsetWidth + 'px';
+    //    verticalSlider.style.height = verticalSliderContainer.offsetHeight + 'px';
+    //  }
+
   // Function to update image crop based on slider values
   function updateCrop() {
+
+    var scale = (parseInt(horizontalSlider.max) + 1.);
 
     var horizontalValueMin = 100 * parseInt(horizontalSlider.value) / (parseInt(horizontalSlider.max) + 1.);
     var horizontalValueMax = 100 * (parseInt(horizontalSlider.value) + 1.) / (parseInt(horizontalSlider.max) + 1.);
@@ -43,23 +53,8 @@ function initializeImageCropping(container) {
     console.log(horizontalValueMin, horizontalValueMax);
     console.log(verticalValueMin, verticalValueMax);
 
-    // Calculate the new width of the image
-    var scale = (parseInt(horizontalSlider.max) + 1.);
-
-    var imageHeight = (parseInt(imageContainer.offsetWidth)) * (image.naturalHeight/image.naturalWidth) + 'px';
-    console.log("imageContainer.offsetWidth", imageHeight);
-    imageContainer.style.height = imageHeight;
-    imageContainer.style.width = imageHeight;
-
     image.style.cssText = `clip-path: polygon(${horizontalValueMin}% ${verticalValueMin}%, ${horizontalValueMax}% ${verticalValueMin}%, ${horizontalValueMax}% ${verticalValueMax}%, ${horizontalValueMin}% ${verticalValueMax}%);`;
-    image.style.transform = `translate(-${horizontalValueMin}%, -${verticalValueMin}%)`; // You can adjust the percentage values as per your requirement
-    image.style.width = scale * 100 + '%';
-    console.log("image.naturalHeight", image.naturalHeight);
-    console.log("image.naturalWidth", image.naturalWidth);
-    console.log("image.width", parseInt(image.width));
-    console.log("image.width", parseInt(image.width));
-
-    console.log("imageContainer.offsetWidth", parseInt(imageContainer.offsetWidth));
+    image.style.transform = `scale(${scale * 100}%) translate(${(scale-1.) / (scale) * 50}%, ${(scale-1.)/ (scale) * 50}%) translate(-${horizontalValueMin}%, -${verticalValueMin}%)`; // You can adjust the percentage values as per your requirement
 
   }
 
