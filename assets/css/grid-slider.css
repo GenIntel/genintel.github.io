@@ -21,6 +21,10 @@
   width: 100%;
 }
 
+.vertical-slider-container {
+    width: 100%;
+}
+
 
 .vertical-slider {
   writing-mode: bt-lr; /* Bottom-to-top, left-to-right */
