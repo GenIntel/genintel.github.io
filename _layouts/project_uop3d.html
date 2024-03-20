@@ -39,7 +39,8 @@
       grid-template-columns: 1fr 1fr 1fr;
       text-align:center;
       height: auto;
-      width: 100%;
+      max-width: 100%;
+      margin: 10%;
       padding: 10px 10px 10px 10px;
     }
     </style>
@@ -290,6 +291,51 @@
             <div class="grid-image-and-sliders">
                 <div class="grid-image-container">
                     <img class="grid-image" src="{{ page.img_grid9 }}" alt="MY ALT TEXT">
+                </div>
+                <div class="vertical-slider-container">
+                    <input type="range" class="vertical-slider slider" min="0" max="3" value="2">
+                </div>
+                <div class="horizontal-slider-container">
+                    <input type="range" class="horizontal-slider slider" min="0" max="3" value="2">
+                </div>
+                <div>&nbsp;</div>
+            </div>
+        {% endif %}
+
+        {% if page.img_grid10 %}
+            <div class="grid-image-and-sliders">
+                <div class="grid-image-container">
+                    <img class="grid-image" src="{{ page.img_grid10 }}" alt="MY ALT TEXT">
+                </div>
+                <div class="vertical-slider-container">
+                    <input type="range" class="vertical-slider slider" min="0" max="3" value="2">
+                </div>
+                <div class="horizontal-slider-container">
+                    <input type="range" class="horizontal-slider slider" min="0" max="3" value="2">
+                </div>
+                <div>&nbsp;</div>
+            </div>
+        {% endif %}
+
+        {% if page.img_grid11 %}
+            <div class="grid-image-and-sliders">
+                <div class="grid-image-container">
+                    <img class="grid-image" src="{{ page.img_grid11 }}" alt="MY ALT TEXT">
+                </div>
+                <div class="vertical-slider-container">
+                    <input type="range" class="vertical-slider slider" min="0" max="3" value="2">
+                </div>
+                <div class="horizontal-slider-container">
+                    <input type="range" class="horizontal-slider slider" min="0" max="3" value="2">
+                </div>
+                <div>&nbsp;</div>
+            </div>
+        {% endif %}
+
+        {% if page.img_grid12 %}
+            <div class="grid-image-and-sliders">
+                <div class="grid-image-container">
+                    <img class="grid-image" src="{{ page.img_grid12 }}" alt="MY ALT TEXT">
                 </div>
                 <div class="vertical-slider-container">
                     <input type="range" class="vertical-slider slider" min="0" max="3" value="2">
