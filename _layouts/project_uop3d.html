@@ -33,6 +33,15 @@
     <link rel="stylesheet"
     href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
     <link rel="stylesheet" href="assets/css/projects.css">
+    <style>
+    .grid-grid-images{
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      text-align:center;
+      height: auto;
+      width: 100%;
+    }
+    </style>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
@@ -41,6 +50,8 @@
     <script src="assets/js/bulma-slider.min.js"></script>
     <script src="assets/js/projects.js"></script>
     <script defer src="assets/js/grid-slider.js"></script>
+
+
 </head>
 <body>
   <section class="hero">
@@ -152,8 +163,13 @@
 {% endif %}
 <!-- End paper abstract -->
 
+
 {% if page.img_grid1 %}
 <section class="hero is-small">
+
+    <div class="grid-grid-images">
+
+
     <div class="grid-image-and-sliders">
         <div class="grid-image-container">
             <img class="grid-image" src="{{ page.img_grid1 }}" alt="MY ALT TEXT">
@@ -166,6 +182,9 @@
         </div>
         <div>&nbsp;</div>
     </div>
+
+    </div>
+
 </section>
 {% endif %}
 

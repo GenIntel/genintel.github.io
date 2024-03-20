@@ -1,9 +1,9 @@
-/*.croppable-image*/
+
 .grid-image-and-sliders{
   display: grid;
   grid-template-columns: 5fr 1fr;
   height: auto;
-  width: 50%;
+  width: 100%;
   text-align:center;
 }
 
