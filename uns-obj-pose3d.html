@@ -3,39 +3,63 @@ layout: project_uop3d # projects project_uop3d
 title: Unsupervised Learning of Category-Level 3D Pose from Object-Centric Videos
 arxiv_pdf: TODO
 supplementary_material: https://www.example.com
-github_link: https://www.example.com
+github_link: https://github.com/Generative-Vision-Robust-Learning/uns-obj-pose3d.git
 arxiv_link: https://www.example.com
-teaser_video: assets/videos/uop3d/co3d_videos.webm
+teaser_video: assets/videos/uop3d/UOP3D_short.webm #  assets/videos/uop3d/co3d_videos.webm
 teaser_video_description: Description of the teaser video
-img_grid1: assets/img/uop3d/bicycle_354_37645_70054.png
-img_grid2: assets/img/uop3d/bicycle_372_41153_81941.png
-img_grid3: assets/img/uop3d/bicycle_373_41715_83384.png
-img_grid4: assets/img/uop3d/teddybear_196_21096_41534.png
-img_grid5: assets/img/uop3d/teddybear_169_18386_34554.png
-img_grid6: assets/img/uop3d/teddybear_208_22018_45660.png
-img_grid7: assets/img/uop3d/car_185_19982_37678.png
-img_grid8: assets/img/uop3d/car_194_20939_43630.png
-img_grid9: assets/img/uop3d/car_194_20900_41097.png
-img_grid10: assets/img/uop3d/bicycle.png
-img_grid11: assets/img/uop3d/teddybear.png
-img_grid12: assets/img/uop3d/car.png
-img_carousel1: assets/img/uop3d/alignment_main.png
+abstract: Category-level 3D pose estimation is a fundamentally
+important problem in computer vision and robotics, e.g. for
+embodied agents or to train 3D generative models. How-
+ever, so far methods that estimate the category-level ob-
+ject pose require either large amounts of human annota-
+tions, CAD models or input from RGB-D sensors. In con-
+trast, we tackle the problem of learning to estimate the
+category-level 3D pose only from casually taken object-
+centric videos without human supervision. We propose a
+two-step pipeline: First, we introduce a multi-view align-
+ment procedure that determines canonical camera poses
+across videos with a novel and robust cyclic distance formu-
+lation for geometric and appearance matching using recon-
+structed coarse meshes and DINOv2 features. In a second
+step, the canonical poses and reconstructed meshes enable
+us to train a model for 3D pose estimation from a single im-
+age. In particular, our model learns to estimate dense cor-
+respondences between images and a prototypical 3D tem-
+plate by predicting, for each pixel in a 2D image, a feature
+vector of the corresponding vertex in the template mesh. We
+demonstrate that our method outperforms all baselines at
+the unsupervised alignment of object-centric videos by a
+large margin and provides faithful and robust predictions
+in-the-wild on the Pascal3D+ and ObjectNet3D datasets.
+img_grid1: # assets/img/uop3d/bicycle_354_37645_70054.png
+img_grid2: # assets/img/uop3d/bicycle_372_41153_81941.png
+img_grid3: # assets/img/uop3d/bicycle_373_41715_83384.png
+img_grid4: # assets/img/uop3d/teddybear_196_21096_41534.png
+img_grid5: # assets/img/uop3d/teddybear_169_18386_34554.png
+img_grid6: # assets/img/uop3d/teddybear_208_22018_45660.png
+img_grid7: # assets/img/uop3d/car_185_19982_37678.png
+img_grid8: # assets/img/uop3d/car_194_20939_43630.png
+img_grid9: # assets/img/uop3d/car_194_20900_41097.png
+img_grid10: # assets/img/uop3d/bicycle.png
+img_grid11: # assets/img/uop3d/teddybear.png
+img_grid12: # assets/img/uop3d/car.png
+img_carousel1: # assets/img/uop3d/alignment_main.png
 description_carousel1: Description carousel 1
-img_carousel2: assets/img/uop3d/alignment_suppl.png
+img_carousel2: # assets/img/uop3d/alignment_suppl.png
 description_carousel2: Description carousel 2
-img_carousel3: assets/img/uop3d/pose_in_the_wild_main.png
+img_carousel3: # assets/img/uop3d/pose_in_the_wild_main.png
 description_carousel3: Description carousel 3
-img_carousel4: assets/img/uop3d/pose_in_the_wild_suppl.png
+img_carousel4: # assets/img/uop3d/pose_in_the_wild_suppl.png
 description_carousel4: Description carousel 4
-img_carousel5: assets/img/uop3d/teaser.png
+img_carousel5: # assets/img/uop3d/teaser.png
 description_carousel5: Description carousel 5
-img_carousel6: assets/img/uop3d/align_ablation_pi6.svg
+img_carousel6: # assets/img/uop3d/align_ablation_pi6.svg
 description_carousel6: Description carousel 6
-img_carousel7: assets/img/uop3d/align_ablation_pi18.svg
+img_carousel7: # assets/img/uop3d/align_ablation_pi18.svg
 description_carousel7: Description carousel 7
-img_carousel8: assets/img/uop3d/nemo.png
+img_carousel8: # assets/img/uop3d/nemo.png
 description_carousel8: Description carousel 8
-youtube_link: https://www.youtube.com/embed/JkaxUblCGz0
+youtube_link: # https://www.youtube.com/embed/JkaxUblCGz0
 bibtex: BibTex Code Here
 ---
 
