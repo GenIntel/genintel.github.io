@@ -127,12 +127,12 @@
 </section>
 
 
-<!-- Teaser video muted -->
+<!-- Teaser video-->
 {% if page.teaser_video and page.teaser_video_description %}
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <video poster="" id="tree" autoplay controls loop height="100%">
+      <video poster="" id="tree" autoplay controls muted loop height="100%">
         <!-- Your video here -->
         <source src="{{ page.teaser_video }}"
         type="video/mp4">
