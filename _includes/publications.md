@@ -76,6 +76,24 @@
     </div>
   </div>
 </div>
+
+<div class="pub-row">
+  <div class="col-sm-3 abbr" style="position: relative;padding-right: 15px;padding-left: 15px;">
+    <img src="assets/img/teaser_unsupervised_pose.png" class="teaser img-fluid z-depth-1">
+    <abbr class="badge"></abbr>
+  </div>
+  <div class="col-sm-9" style="position: relative;padding-right: 15px;padding-left: 20px;">
+    <div class="title"><a href="https://genintel.github.io/common3d">Common3d: Self-Supervised Learning of 3D Morphable Models for Common Objects in Neural Feature Space</a></div>
+    <div class="author">Leonhard Sommer, Olaf Dünkel, Christian Theobalt and, Adam Kortylewski</div>
+    <div class="periodical"><em><strong>CVPR</strong>, 2025.</em></div>
+    <div class="links">
+      <a href="https://openaccess.thecvf.com/content/CVPR2024/papers/Sommer_Unsupervised_Learning_of_Category-Level_3D_Pose_from_Object-Centric_Videos_CVPR_2024_paper.pdf" class="btn btn-sm z-depth-0" role="button" target="_blank" style="font-size:12px;">PDF</a>
+      <a href="https://github.com/GenIntel/common3d" class="btn btn-sm z-depth-0" role="button" target="_blank" style="font-size:12px;">Code</a>
+      <a href="https://genintel.github.io/common3d" class="btn btn-sm z-depth-0" role="button" target="_blank" style="font-size:12px;">Project Page</a>
+      <!--<a href="https://dblp.org/rec/conf/cvpr/TODO.html?view=bibtex" class="btn btn-sm z-depth-0" role="button" target="_blank" style="font-size:12px;">BibTex</a>-->
+    </div>
+  </div>
+</div>
 </li>
 <br>
 </ol>
