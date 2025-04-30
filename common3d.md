@@ -1,6 +1,6 @@
 ---
 layout: project_uop3d # projects project_uop3d
-title: Common3D &#58; Self-Supervised Learning of 3D Morphable Models for Common Objects in Neural Feature Space
+title: Common3D&#58; Self-Supervised Learning of 3D Morphable Models for Common Objects in Neural Feature Space
 arxiv_pdf:
 supplementary_material:
 github_link: https://github.com/GenIntel/common3d.git
