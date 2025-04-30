@@ -41,7 +41,7 @@ poster: # assets/pdf/uop3d/UOP3D_Poster.pdf
 bibtex: <br> &#64;InProceedings&#123; Sommer&#95;2025&#95;CVPR, <br>
 ---
 
-[Leonhard Sommer](https://github.com/limpbot)<sup>1</sup>, [Olaf Dünkel](https://odunkel.github.io)<sup>2</sup>, [Christian Theobalt](https://www.via-center.science)<sup>2</sup>, [Adam Kortylewski](https://genintel.mpi-inf.mpg.de)<sup>1</sup>
+[Leonhard Sommer](https://github.com/limpbot)<sup>1</sup>, [Olaf Dünkel](https://odunkel.github.io)<sup>2</sup>, [Christian Theobalt](https://www.via-center.science)<sup>2</sup>, [Adam Kortylewski](https://genintel.mpi-inf.mpg.de)<sup>1,2</sup>
 
 <title>Common3D</title>
 <div class="is-size-5 publication-authors">

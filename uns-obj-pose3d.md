@@ -48,12 +48,13 @@ bibtex: <br> &#64;InProceedings&#123; Sommer&#95;2024&#95;CVPR, <br>
  &#125;
 ---
 
-[Leonhard Sommer](https://github.com/limpbot)<sup>1</sup>, [Artur Jesslen](https://arturjssln.github.io)<sup>1</sup>, [Eddy Ilg](https://www.utn.de/departments/department-computer-science-artificial-intelligence/cvmp-lab)<sup>2</sup>, [Adam Kortylewski](https://genintel.mpi-inf.mpg.de)<sup>1</sup>
+[Leonhard Sommer](https://github.com/limpbot)<sup>1</sup>, [Artur Jesslen](https://arturjssln.github.io)<sup>1</sup>, [Eddy Ilg](https://www.utn.de/departments/department-computer-science-artificial-intelligence/cvmp-lab)<sup>2</sup>, [Adam Kortylewski](https://genintel.mpi-inf.mpg.de)<sup>1,3</sup>
 
 <div class="is-size-5 publication-authors">
 <span class="author-block">
 <sup>1</sup>University of Freibug &nbsp;
 <sup>2</sup>Saarland University
+<sup>3</sup>Max Planck Institut für Informatik
 <br>
 CVPR 2024</span>
 
