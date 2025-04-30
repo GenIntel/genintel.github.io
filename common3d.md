@@ -1,6 +1,6 @@
 ---
 layout: project_uop3d # projects project_uop3d
-title: Common3D # : Self-Supervised Learning of 3D Morphable Models for Common Objects in Neural Feature Space
+title: Common3D &#58; Self-Supervised Learning of 3D Morphable Models for Common Objects in Neural Feature Space
 arxiv_pdf:
 supplementary_material:
 github_link: https://github.com/GenIntel/common3d.git
@@ -50,6 +50,7 @@ bibtex: <br> &#64;InProceedings&#123; Sommer&#95;2024&#95;CVPR, <br>
 
 [Leonhard Sommer](https://github.com/limpbot)<sup>1</sup>, [Olaf Dünkel](https://odunkel.github.io)<sup>2</sup>, [Christian Theobalt](https://www.via-center.science)<sup>2</sup>, [Adam Kortylewski](https://genintel.mpi-inf.mpg.de)<sup>1</sup>
 
+<title>Common3D</title>
 <div class="is-size-5 publication-authors">
 <span class="author-block">
 <sup>1</sup>University of Freibug &nbsp;
