@@ -53,7 +53,7 @@ bibtex: <br> &#64;InProceedings&#123; Sommer&#95;2024&#95;CVPR, <br>
 <div class="is-size-5 publication-authors">
 <span class="author-block">
 <sup>1</sup>University of Freibug &nbsp;
-<sup>2</sup>Saarland University
+<sup>2</sup>Saarland University &nbsp;
 <sup>3</sup>Max Planck Institut für Informatik
 <br>
 CVPR 2024</span>
