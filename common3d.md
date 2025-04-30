@@ -38,14 +38,7 @@ img_carousel8: # assets/img/uop3d/nemo.png
 description_carousel8: Description carousel 8
 youtube_link: # https://www.youtube.com/embed/JkaxUblCGz0
 poster: # assets/pdf/uop3d/UOP3D_Poster.pdf
-bibtex: <br> &#64;InProceedings&#123; Sommer&#95;2024&#95;CVPR, <br>
-    author    &#61; &#123;Sommer, Leonhard and Jesslen, Artur and Ilg, Eddy and Kortylewski, Adam&#125;, <br>
-    title     &#61 &#123;Unsupervised Learning of Category-Level 3D Pose from Object-Centric Videos&#125;, <br>
-    booktitle &#61 &#123;Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)&#125;, <br>
-    month     &#61 &#123;June&#125;, <br>
-    year      &#61 &#123;2024&#125;, <br>
-    pages     &#61 &#123;22787-22796&#125; <br>
- &#125;
+bibtex: <br> &#64;InProceedings&#123; Sommer&#95;2025&#95;CVPR, <br>
 ---
 
 [Leonhard Sommer](https://github.com/limpbot)<sup>1</sup>, [Olaf Dünkel](https://odunkel.github.io)<sup>2</sup>, [Christian Theobalt](https://www.via-center.science)<sup>2</sup>, [Adam Kortylewski](https://genintel.mpi-inf.mpg.de)<sup>1</sup>
