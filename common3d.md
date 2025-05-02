@@ -1,10 +1,10 @@
 ---
 layout: project_uop3d # projects project_uop3d
 title: Common3D&#58; Self-Supervised Learning of 3D Morphable Models for Common Objects in Neural Feature Space
-arxiv_pdf:
+arxiv_pdf: 
 supplementary_material:
 github_link: https://github.com/GenIntel/common3d.git
-arxiv_link:
+arxiv_link: https://arxiv.org/abs/2504.21749
 teaser_video:
 teaser_video_description: ...
 abstract: 3D morphable models (3DMMs) are a powerful tool to represent the possible shapes and appearances of an object category. Given a single test image, 3DMMs can be used to solve various tasks, such as predicting the 3D shape, pose, semantic correspondence, and instance segmentation of an object. Unfortunately, 3DMMs are only available for very few object categories that are of particular interest, like faces or human bodies, as they require a demanding 3D data acquisition and category-specific training process. In contrast, we introduce a new method, Common3D, that learns 3DMMs of common objects in a fully self-supervised manner from a collection of object-centric videos. For this purpose, our model represents objects as a learned 3D template mesh and a deformation field that is parameterized as an image-conditioned neural network. Different from prior works, Common3D represents the object appearance with neural features instead of RGB colors, which enables the learning of more generalizable representations through an abstraction from pixel intensities. Importantly, we train the appearance features using a contrastive objective by exploiting the correspondences defined through the deformable template mesh. This leads to higher quality correspondence features compared to related works and a significantly improved model performance at estimating 3D object pose and semantic correspondence. Common3D is the first completely self-supervised method that can solve various vision tasks in a zero-shot manner.
