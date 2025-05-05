@@ -1,4 +1,4 @@
-# generative-vision-robust-learning.github.io
+# genintel.github.io
 
 ## Create a new publication page
 1. Copy the template from `genintel.github.io/project_template/template.md` to `genintel.github.io/template.md`
