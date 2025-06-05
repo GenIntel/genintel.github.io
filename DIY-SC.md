@@ -14,11 +14,12 @@ bibtex: "@article{diy_semantic_correspondence,\n\t title   = {Do It Yourself: Le
 
 [Olaf Dünkel](https://odunkel.github.io)<sup>1</sup>, [Thomas Wimmer](https://wimmerth.github.io/)<sup>1,2</sup>, [Christian Theobalt](https://www.via-center.science)<sup>2</sup>, [Christian Rupprecht](https://chrirupp.github.io/)<sup>3</sup>, [Adam Kortylewski](https://genintel.mpi-inf.mpg.de)<sup>1,4</sup>
 
+
 <div class="is-size-5 publication-authors">
 <span class="author-block">
 <sup>1</sup>Max Planck Institute for Informatics &nbsp;
 <sup>2</sup>ETH Zurich &nbsp;<br>
 <sup>3</sup>University of Oxford &nbsp;<br>
-<sup>3</sup>University of Freiburg
-<br>
+<sup>4</sup>University of Freiburg<br>
+arXiv 2025</span>
 </div>
