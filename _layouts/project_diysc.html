@@ -25,7 +25,6 @@
 <body>
 
 <!-- From here, I can customize.-->
-
 <section class="hero">
   <div class="hero-body">
     <div class="container is-max-desktop">
@@ -120,24 +119,23 @@
   <div class="container is-max-desktop" style="width: 70%;">
     <div class="hero-body" style="padding-bottom: 2rem; padding-top: 2rem;">
       <div class="content has-text-justified">
-      <table style="width: 100%; text-align: center;">
-        <tr>
-        <td>
-          <img src="./assets/img/diysc/teaser-3.png" alt="Teaser qualitative" style="width: auto; height: 400px;">
-        </td>
-        <td> 
-          <img src="./assets/img/diysc/method-simple2.png" alt="Method simple" style="width: auto; height: 400px;">
-        </td>
-        </tr>
-        <tr> 
-        <td>DIY-SC finds semantic correspondences even for extreme appearance and shape changes.</td>
-        <td>Feature refinement with filtered pseudo-labels brings significant improvements.</td>
-        </tr>
-      </table>
+        <table style="width: 100%; text-align: center;">
+          <tr>
+            <td>
+              <img src="./assets/img/diysc/teaser-3.png" alt="Teaser qualitative" style="width: 100%; height: auto;">
+            </td>
+            <td>
+              <img src="./assets/img/diysc/method-simple2.png" alt="Method simple" style="width: 100%; height: auto;">
+            </td>
+          </tr>
+          <tr>
+            <td>DIY-SC finds semantic correspondences for extreme appearance and shape changes.</td>
+            <td>Feature refinement with filtered pseudo-labels brings significant improvements.</td>
+          </tr>
+        </table>
       </div>
     </div>
   </div>
-
 </section>
   
 
@@ -183,10 +181,22 @@
       <div class="column is-full-width has-text-centered">
         
         <h2 class="title is-3" style="color:#006c66;">Results.</h2>
-        <!-- Comparison Videos. -->
-        <div class="content has-text-justified">
-          <p>Results of <b>DIY-SC</b>.</p>
+        <div class="content has-text-centered">
+          <img src="./assets/img/diysc/pck_results.png" alt="PCK results" style="width: 70%; height: auto;">
+          <p>
+            <b>Results for different PCK levels (per-image) on the SPair-71k and the AP-10k dataset.</b>
+          </p>
         </div>
+
+      <h2 class="title is-3" style="color:#006c66;">Ablations.</h2>
+
+        <div class="content has-text-centered">
+          <img src="./assets/img/diysc/ablation.png" alt="Ablations" style="width: 70%; height: auto;">
+          <p>
+            <b>Ablations on SPair-71k.</b> All introduced components bring a significant improvement.
+          </p>
+        </div>
+
         
       </div>
     </div>
@@ -201,12 +211,12 @@
 <br>
 <div class="container is-max-desktop content">
   <h2 class="title" style="color: #006c66;">Acknowledgments</h2>
-  Adam Kortylewski acknowledges support via his Emmy Noether Research Group funded by the German Reserach Foundation (DFG) under Grant No. 468670075. Thomas Wimmer is supported through the Max Planck ETH Center for Learning Systems
+  Adam Kortylewski acknowledges support via his Emmy Noether Research Group funded by the German Research Foundation (DFG) under Grant No. 468670075. Thomas Wimmer is supported through the Max Planck ETH Center for Learning Systems.
 </div>
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title" style="color: #006c66;">BibTeX</h2>
-    <pre><code>@misc{olaf2025diysc,
+    <pre><code>@misc{duenkel2025diysc,
     title = {Do It Yourself: Learning Semantic Correspondence from Pseudo-Labels},
     author = {Dünkel, Olaf and Wimmer, Thomas and Theobalt, Christian and Rupprecht, Christian and Kortylewski, Adam},
     booktitle = {arXiv},
@@ -222,7 +232,7 @@
       <div class="column is-8">
         <div class="content">
           <p>
-            This awesome webpage template was borrowed from <a rel="license" href="https://nerfies.github.io">Nerfies</a>, thanks!
+            This webpage template was borrowed from <a rel="license" href="https://nerfies.github.io">Nerfies</a>.
           </p>
         </div>
       </div>
