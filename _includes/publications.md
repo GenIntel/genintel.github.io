@@ -100,7 +100,7 @@
 
 <div class="pub-row">
   <div class="col-sm-3 abbr" style="position: relative;padding-right: 15px;padding-left: 15px;">
-    <img src="assets/img/teaser_nemoCls.png" class="teaser img-fluid z-depth-1">
+    <img src="assets/img/novum/teaser_nemoCls.png" class="teaser img-fluid z-depth-1">
     <abbr class="badge"></abbr>
   </div>
   <div class="col-sm-9" style="position: relative;padding-right: 15px;padding-left: 20px;">
