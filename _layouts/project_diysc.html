@@ -1,109 +1,114 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8">
-    <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
-    <!-- Replace the content tag with appropriate information -->
-    <meta name="description" content="Generative Intelligence project">
-    <meta property="og:title" content="Generative Intelligence project"/>
-    <meta property="og:description" content=""/>
-    <meta property="og:url" content="genintel.github.io"/>
-    <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
-    <meta property="og:image" content="assets/image/your_banner_image.png" />
-    <meta property="og:image:width" content="1200"/>
-    <meta property="og:image:height" content="630"/>
-    <meta name="twitter:title" content="Generative Intelligence project">
-    <meta name="twitter:description" content="">
-    <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
-    <meta name="twitter:image" content="assets/images/your_twitter_banner_image.png">
-    <meta name="twitter:card" content="summary_large_image">
-    <!-- Keywords for your paper to be projectsed by-->
-    <meta name="keywords" content="Generative Intelligence, AI, ML, Deep Learning, Computer Vision">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <meta name="description" content="Do It Yourself: Learning Semantic Correspondence from Pseudo-Labels">
+  <meta name="keywords" content="Keywords">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DIY-SC</title>
 
+  <link rel="stylesheet" href="assets/css/bulma.min.css">
+  <link rel="stylesheet" href="assets/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="assets/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="assets/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="assets/css/projects.css">
 
-    <title>Academic Project Page</title>
-    <link rel="icon" type="image/x-icon" href="assets/img/favicon.png">
-
-    <link rel="stylesheet" href="assets/css/bulma.min.css">
-    <link rel="stylesheet" href="assets/css/bulma-carousel.min.css">
-    <link rel="stylesheet" href="assets/css/bulma-slider.min.css">
-    <link rel="stylesheet" href="assets/css/fontawesome.all.min.css">
-    <link rel="stylesheet"
-    href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-    <link rel="stylesheet" href="assets/css/projects.css">
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
-    <script defer src="assets/js/fontawesome.all.min.js"></script>
-    <script src="assets/js/bulma-carousel.min.js"></script>
-    <script src="assets/js/bulma-slider.min.js"></script>
-    <script src="assets/js/projects.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="assets/js/fontawesome.all.min.js"></script>
+  <script src="assets/js/bulma-carousel.min.js"></script>
+  <script src="assets/js/bulma-slider.min.js"></script>
+  <script src="assets/js/projects.js"></script>
 </head>
 <body>
-  <section class="hero">
-    <div class="hero-body">
-      <div class="container is-max-desktop">
-        <div class="columns is-centered">
+
+<!-- From here, I can customize.-->
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Do It Yourself: Learning Semantic Correspondence from Pseudo-Labels</h1>
+
+          <!-- <div class="title is-3">
+            <strong>arXiv 2024</strong>
+          </div> -->
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://odunkel.github.io">Olaf Dünkel </a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://wimmerth.github.io/">Thomas Wimmer</a><sup>1,2</sup>,</span>
+            <span class="author-block">
+              <a href="https://wimmerth.github.io/">Christian Theobalt</a><sup>2</sup>,</span>
+              <span class="author-block">
+                <a href="https://wimmerth.github.io/">Christian Rupprecht</a><sup>3</sup>,</span>
+              <span class="author-block">
+                <a href="https://wimmerth.github.io/">Adam Kortylewski</a><sup>1,4</sup></span>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>Max Planck Institute for Informatics, <sup>2</sup>ETH Zurich</span>, <sup>3</sup>University of Oxford</span>, <sup>4</sup>University of Freiburg</span>
+          </div>
+
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">{{ page.title }}</h1>
-            <div class="is-size-5">
-                {{ content | markdownify }}
+            <div class="publication-links">
+              <!-- PDF Link. FIXME Put arxiv-->
+              <span class="link-block">
+                <a href="http://arxiv.org/abs/XXX.pdf"
+                   class="external-link button is-normal is-rounded is-dark" target="_blank">
+                  <span class="icon">
+                    <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="http://arxiv.org/abs/XXX"
+                   class="external-link button is-normal is-rounded is-dark" target="_blank">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Video Link. -->
+              <!-- <span class="link-block">
+                <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span> -->
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/odunkel"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+
+              <span class="link-block">
+                <a href="https://github.com/odunkel"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Demo</span>
+                  </a>
+              </span>
             </div>
-                <div class="column has-text-centered">
-                    <div class="publication-links">
-                    <!-- Arxiv PDF link -->
-                    {% if page.arxiv_pdf %}
-                        <span class="link-block">
-                            <a href="{{ page.arxiv_pdf }}" target="_blank"
-                            class="external-link button is-normal is-rounded is-dark">
-                            <span class="icon">
-                            <i class="fas fa-file-pdf"></i>
-                            </span>
-                            <span>Paper</span>
-                            </a>
-                        </span>
-                    {% endif %}
 
-                    <!-- Supplementary PDF link -->
-                    {% if page.supplementary_material %}
-                        <span class="link-block">
-                        <a href="{{ page.supplementary_material }}" target="_blank"
-                        class="external-link button is-normal is-rounded is-dark">
-                        <span class="icon">
-                            <i class="fas fa-file-pdf"></i>
-                        </span>
-                        <span>Supplementary</span>
-                        </a>
-                        </span>
-                    {% endif %}
-
-                    <!-- Github link -->
-                    {% if page.github_link %}
-                        <span class="link-block">
-                            <a href="{{ page.github_link }}" target="_blank"
-                            class="external-link button is-normal is-rounded is-dark">
-                            <span class="icon">
-                            <i class="fab fa-github"></i>
-                            </span>
-                            <span>Code</span>
-                        </a>
-                        </span>
-                    {% endif %}
-
-                    <!-- ArXiv abstract Link -->
-                    {% if page.arxiv_link %}
-                        <span class="link-block">
-                        <a href="{{ page.arxiv_link }}" target="_blank"
-                        class="external-link button is-normal is-rounded is-dark">
-                        <span class="icon">
-                            <i class="ai ai-arxiv"></i>
-                        </span>
-                        <span>arXiv</span>
-                        </a>
-                        </span>
-                    {% endif %}
-            </div>
           </div>
         </div>
       </div>
@@ -111,165 +116,121 @@
   </div>
 </section>
 
-
-<!-- Teaser video-->
-{% if page.teaser_video and page.teaser_video_description %}
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <video poster="" id="tree" autoplay controls muted loop height="100%">
-        <!-- Your video here -->
-        <source src="{{ page.teaser_video }}"
-        type="video/mp4">
-      </video>
-      <h2 class="subtitle has-text-centered">
-        {{ page.teaser_video_description }} 
-      </h2>
+<section class="hero teaser" style="background: #f5f5f5;">
+  <div class="container is-max-desktop" style="width: 70%;">
+    <div class="hero-body" style="padding-bottom: 2rem; padding-top: 2rem;">
+      <div class="content has-text-justified">
+      <table style="width: 100%; text-align: center;">
+        <tr>
+        <td>
+          <img src="./assets/img/diysc/teaser-3.png" alt="Teaser qualitative" style="width: auto; height: 400px;">
+        </td>
+        <td> 
+          <img src="./assets/img/diysc/method-simple2.png" alt="Method simple" style="width: auto; height: 400px;">
+        </td>
+        </tr>
+        <tr> 
+        <td>DIY-SC finds semantic correspondences even for extreme appearance and shape changes.</td>
+        <td>Feature refinement with filtered pseudo-labels brings significant improvements.</td>
+        </tr>
+      </table>
+      </div>
     </div>
   </div>
-</section>
-{% endif %}
-<!-- End teaser video -->
 
-<!-- Teaser figure-->
-{% if page.teaser_figure and page.teaser_figure_description %}
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <figure class="image is-3by2">
-        <img src="{{ page.teaser_figure }}" alt="Teaser Figure">
-      </figure>
-      <h2 class="subtitle has-text-centered">
-        {{ page.teaser_figure_description }}
-      </h2>
-    </div>
-  </div>
 </section>
-{% endif %}
-<!-- End teaser figure -->
+  
 
-{% if page.abstract %}
-<!-- Paper abstract -->
-<section class="section hero is-light">
+<section class="section" style="padding-top: 3rem;">
   <div class="container is-max-desktop">
+    <!-- Abstract. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
+        <h2 class="title is-3" style="color: #006c66;">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            {{ page.abstract }} 
+            Finding correspondences between semantically similar points across images and object instances is one of the everlasting challenges in computer vision. While large pre-trained vision models have recently been demonstrated as effective priors for semantic matching, they still suffer from ambiguities for symmetric objects or repeated object parts. We propose to improve semantic correspondence estimation via 3D-aware pseudo-labeling. Specifically, we train an adapter to refine off-the-shelf features with pseudo-labels obtained via 3D-aware chaining, filtering wrong labels through relaxed cyclic consistency, and 3D spherical prototype mapping constraints. While reducing the need for dataset specific annotations compared to prior work, we set a new state-of-the-art on SPair-71k by over 4% absolute gain and by over 7% against methods with similar supervision requirements. The generality of our proposed approach simplifies extension of training to other data sources, which we demonstrate in our experiments. 
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-max-desktop">
+        <h2 class="title is-3" style="color: #006c66;">Method</h2>
+        <div class="content has-text-justified">
+            <img src="./assets/img/diysc/method-figure.png" alt="Description of the image" style="width: 100%;">
+          <p>
+            <b>Method overview.</b> We use azimuth information to sample image pairs for which higher zero-shot performance can be expected (1). We then chain the pairwise predictions to get correspondences for larger viewpoint changes, where we reject matches that do not fulfill a relaxed cyclic consistency constraint (2). We further filter pseudo-labels by rejecting pairs that cannot be mapped to a similar location on a 3D spherical prototype (3). Finally, we use the resulting pseudo-labels to train an adapter in a supervised manner (4).
+          </p>
+        </div>
+        </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="section">
+  <div class="container is-max-desktop"> 
+    <div class="columns is-centered">
+      <div class="column is-full-width has-text-centered">
+        
+        <h2 class="title is-3" style="color:#006c66;">Results.</h2>
+        <!-- Comparison Videos. -->
+        <div class="content has-text-justified">
+          <p>Results of <b>DIY-SC</b>.</p>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+<br>
+<br>
+<div class="container is-max-desktop content">
+  <h2 class="title" style="color: #006c66;">Acknowledgments</h2>
+  Adam Kortylewski acknowledges support via his Emmy Noether Research Group funded by the German Reserach Foundation (DFG) under Grant No. 468670075. Thomas Wimmer is supported through the Max Planck ETH Center for Learning Systems
+</div>
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title" style="color: #006c66;">BibTeX</h2>
+    <pre><code>@misc{olaf2025diysc,
+    title = {Do It Yourself: Learning Semantic Correspondence from Pseudo-Labels},
+    author = {Dünkel, Olaf and Wimmer, Thomas and Theobalt, Christian and Rupprecht, Christian and Kortylewski, Adam},
+    booktitle = {arXiv},
+    year = {2025},
+}</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This awesome webpage template was borrowed from <a rel="license" href="https://nerfies.github.io">Nerfies</a>, thanks!
           </p>
         </div>
       </div>
     </div>
   </div>
-</section>
-{% endif %}
-<!-- End paper abstract -->
-
-<!-- Image carousel -->
-{% if page.img_carousel1 %}
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-       <div class="item">
-        <!-- Your image here -->
-        <img src="{{ page.img_carousel1 }}" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-            {{ page.description_carousel1 }}
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="{{ page.img_carousel2 }}" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-            {{ page.description_carousel2 }}
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="{{ page.img_carousel3 }}" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-            {{ page.description_carousel3 }}
-       </h2>
-     </div>
-     <div class="item">
-      <!-- Your image here -->
-      <img src="{{ page.img_carousel4 }}" alt="MY ALT TEXT"/>
-      <h2 class="subtitle has-text-centered">
-        {{ page.description_carousel4 }}
-      </h2>
-    </div>
-  </div>
-</div>
-</div>
-</section>
-{% endif %}
-<!-- End image carousel -->
-
-
-<!-- Youtube video -->
-{% if page.youtube_link %}
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <!-- Paper video. -->
-      <h2 class="title is-3">Video Presentation</h2>
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          
-          <div class="publication-video">
-            <!-- Youtube embed code here -->
-            <iframe src="{{ page.youtube_link }}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-{% endif %}
-<!-- End youtube video -->
-
-<!-- Paper poster -->
-{% if page.poster %}
-<section class="hero is-small is-light">
-    <div class="hero-body">
-        <div class="container">
-            <h2 class="title">Poster</h2>
-            <iframe  src="{{ page.poster }}" width="100%" height="550">
-            </iframe>
-        </div>
-    </div>
-</section>
-{% endif %}
-<!--End paper poster -->
-
-
-<!--BibTex citation -->
-{% if page.bibtex %}
-  <section class="section" id="BibTeX">
-    <div class="container is-max-desktop content">
-      <h2 class="title">BibTeX</h2>
-      <pre><code>{{ page.bibtex }}</code></pre>
-    </div>
-</section>
-{% endif %}
-<!--End BibTex citation -->
-
-
-<footer class="footer">
-<div class="container">
-    <div class="columns is-centered">
-        <div class="column is-8">
-            <div class="content">
-                <p>
-                    This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a>.
-                </p>
-            </div>
-        </div>
-    </div>
-</div>
 </footer>
+
+<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+
 </body>
 </html>
