@@ -77,6 +77,8 @@
   </div>
 </div>
 
+
+
 <div class="pub-row">
   <div class="col-sm-3 abbr" style="position: relative;padding-right: 15px;padding-left: 15px;">
     <img src="assets/img/teaser_unsupervised_pose.png" class="teaser img-fluid z-depth-1">
@@ -94,6 +96,27 @@
     </div>
   </div>
 </div>
+
+
+<div class="pub-row">
+  <div class="col-sm-3 abbr" style="position: relative;padding-right: 15px;padding-left: 15px;">
+    <img src="assets/img/teaser_nemoCls.png" class="teaser img-fluid z-depth-1">
+    <abbr class="badge"></abbr>
+  </div>
+  <div class="col-sm-9" style="position: relative;padding-right: 15px;padding-left: 20px;">
+    <div class="title"><a href="https://artur.jesslen.ch/NOVUM">NOVUM: Neural Object Volumes for Robust Object Classification</a></div>
+    <div class="author"><strong>Artur Jesslen</strong>, Guofeng Zhang, Angtian Wang, Wufei Ma, Alan Yuille, and Adam Kortylewski</div>
+    <div class="periodical"><em>ECCV<strong></strong>, 2024.</em></div>
+    <div class="links">
+      <a href="https://arxiv.org/pdf/2303.16839.pdf" class="btn btn-sm z-depth-0" role="button" target="_blank" style="font-size:12px;">PDF</a>
+      <a href="https://github.com/GenIntel/NOVUM" class="btn btn-sm z-depth-0" role="button" target="_blank" style="font-size:12px;">Code</a>
+      <a href="https://artur.jesslen.ch/NOVUM" class="btn btn-sm z-depth-0" role="button" target="_blank" style="font-size:12px;">Project page</a>
+      <a href="assets/bibtex/2024_novum.txt" class="btn btn-sm z-depth-0" role="button" target="_blank" style="font-size:12px;">BibTex</a>
+    </div>
+  </div>
+</div>
+
+
 </li>
 <br>
 </ol>
