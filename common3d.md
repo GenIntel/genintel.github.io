@@ -5,7 +5,7 @@ arxiv_pdf:
 supplementary_material:
 github_link: https://github.com/GenIntel/common3d.git
 arxiv_link: https://arxiv.org/abs/2504.21749
-teaser_video: 
+teaser_video: https://www.youtube.com/watch?v=6YdrttT4-rU
 teaser_video_description: ...
 abstract: 3D morphable models (3DMMs) are a powerful tool to represent the possible shapes and appearances of an object category. Given a single test image, 3DMMs can be used to solve various tasks, such as predicting the 3D shape, pose, semantic correspondence, and instance segmentation of an object. Unfortunately, 3DMMs are only available for very few object categories that are of particular interest, like faces or human bodies, as they require a demanding 3D data acquisition and category-specific training process. In contrast, we introduce a new method, Common3D, that learns 3DMMs of common objects in a fully self-supervised manner from a collection of object-centric videos. For this purpose, our model represents objects as a learned 3D template mesh and a deformation field that is parameterized as an image-conditioned neural network. Different from prior works, Common3D represents the object appearance with neural features instead of RGB colors, which enables the learning of more generalizable representations through an abstraction from pixel intensities. Importantly, we train the appearance features using a contrastive objective by exploiting the correspondences defined through the deformable template mesh. This leads to higher quality correspondence features compared to related works and a significantly improved model performance at estimating 3D object pose and semantic correspondence. Common3D is the first completely self-supervised method that can solve various vision tasks in a zero-shot manner.
 img_grid1: # assets/img/uop3d/bicycle_354_37645_70054.png
@@ -36,7 +36,7 @@ img_carousel7: # assets/img/uop3d/align_ablation_pi18.svg
 description_carousel7: Description carousel 7
 img_carousel8: # assets/img/uop3d/nemo.png
 description_carousel8: Description carousel 8
-youtube_link: https://www.youtube.com/watch?v=6YdrttT4-rU
+youtube_link: # 
 poster: # assets/pdf/uop3d/UOP3D_Poster.pdf
 bibtex: <br> &#64;InProceedings&#123; Sommer&#95;2025&#95;CVPR, <br>
 ---
