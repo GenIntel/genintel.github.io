@@ -39,7 +39,7 @@ description_carousel8: Description carousel 8
 youtube_link: # 
 poster: # assets/pdf/uop3d/UOP3D_Poster.pdf
 bibtex: <br> &#64;InProceedings&#123; Sommer&#95;2025&#95;CVPR, <br>
-    author    &#61; &#123;Sommer, Leonhard and D&#252;unkel, Olaf and Theobalt, Christian and Kortylewski, Adam&#125;, <br>
+    author    &#61; &#123;Sommer, Leonhard and D&#252;nkel, Olaf and Theobalt, Christian and Kortylewski, Adam&#125;, <br>
     title     &#61 &#123;Common3D: Self-Supervised Learning of 3D Morphable Models for Common Objects in Neural Feature Space&#125;, <br>
     booktitle &#61 &#123;Proceedings of the Computer Vision and Pattern Recognition Conference (CVPR)&#125;, <br>
     month     &#61 &#123;June&#125;, <br>
