@@ -30,7 +30,7 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">Do It Yourself: Learning Semantic Correspondence from Pseudo-Labels</h1>
+          <h1 class="title is-1 publication-title">CNS-Bench: Benchmarking Image Classifier Robustness Under Continuous Nuisance Shifts</h1>
 
           <!-- <div class="title is-3">
             <strong>arXiv 2024</strong>
@@ -38,28 +38,29 @@
 
           <div class="is-size-5 publication-authors">
             <span class="author-block">
-              <a href="https://odunkel.github.io">Olaf Dünkel</a><sup>1</sup>,
-            </span>
+              <a href="https://odunkel.github.io">Olaf Dünkel</a><sup>1</sup>,</span>
             <span class="author-block">
-              <a href="https://wimmerth.github.io/">Thomas Wimmer</a><sup>1,2</sup>,</span>
+              <a href="https://artur.jesslen.ch//">Artur Jesslen</a><sup>2</sup>,</span>
+            <span class="author-block">
+              <a href="https://jiahao000.github.io/">Jiaohao Xie</a><sup>1 </sup>,</span>
             <span class="author-block">
               <a href="https://people.mpi-inf.mpg.de/~theobalt/">Christian Theobalt</a><sup>1</sup>,</span>
               <span class="author-block">
                 <a href="https://chrirupp.github.io/">Christian Rupprecht</a><sup>3</sup>,</span>
               <span class="author-block">
-                <a href="https://genintel.mpi-inf.mpg.de/">Adam Kortylewski</a><sup>1,4</sup></span>
+                <a href="https://genintel.mpi-inf.mpg.de/">Adam Kortylewski</a><sup>1,2</sup></span>
             </span>
           </div>
 
           <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup>1</sup>Max Planck Institute for Informatics, <sup>2</sup>ETH Zurich</span>, <sup>3</sup>University of Oxford</span>, <sup>4</sup>University of Freiburg</span>
+            <span class="author-block"><sup>1</sup>Max Planck Institute for Informatics, <sup>2</sup>University of Freiburg</span>, <sup>3</sup>University of Oxford</span>
           </div>
 
           <div class="column has-text-centered">
             <div class="publication-links">
               <!-- PDF Link. FIXME Put arxiv-->
               <span class="link-block">
-                <a href="http://arxiv.org/pdf/2506.05312"
+                <a href=""
                    class="external-link button is-normal is-rounded is-dark" target="_blank">
                   <span class="icon">
                     <i class="fas fa-file-pdf"></i>
@@ -68,7 +69,7 @@
                 </a>
               </span>
               <span class="link-block">
-                <a href="http://arxiv.org/abs/2506.05312"
+                <a href=""
                    class="external-link button is-normal is-rounded is-dark" target="_blank">
                   <span class="icon">
                       <i class="ai ai-arxiv"></i>
@@ -78,7 +79,7 @@
               </span>
               <!-- Code Link. -->
               <span class="link-block">
-                <a href="https://github.com/odunkel/DIY-SC"
+                <a href=""
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-github"></i>
@@ -86,12 +87,14 @@
                   <span>Code</span>
                   </a>
               </span>
-              <!-- Demo Link. -->
               <span class="link-block">
-                <a href="https://huggingface.co/spaces/odunkel/DIY-SC"
-                   class="external-link button is-normal is-rounded is-dark">
-                   <span>🤗 Demo</span>
-                  </a>
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark" target="_blank">
+                  <span class="icon">
+                    <i class="fas fa-database"></i>
+                  </span>
+                  <span>Data</span>
+                </a>
               </span>
             </div>
 
@@ -106,21 +109,11 @@
   <div class="container is-max-desktop" style="width: 70%;">
     <div class="hero-body" style="padding-bottom: 2rem; padding-top: 2rem;">
       <div class="content has-text-justified">
-        <table style="width: 100%; text-align: center;">
-          <tr>
-            <td>
-              <img src="./assets/img/diysc/teaser-3.png" alt="Teaser qualitative" style="width: 100%; height: auto;">
-            </td>
-            <td>
-              <img src="./assets/img/diysc/method-simple2.png" alt="Method simple" style="width: 100%; height: auto;">
-            </td>
-          </tr>
-          <tr>
-            <td>DIY-SC finds semantic correspondences for extreme appearance and shape changes.</td>
-            <td>Feature refinement with filtered pseudo-labels brings significant improvements.</td>
-          </tr>
-        </table>
-      </div>
+            <video src="./assets/videos/TeaserShiftScene.mp4" controls autoplay muted style="width: 100%;" alt="CNS teaser video"></video>
+          <p>
+            <b>Teaser figure.</b> We evaluate the robustness of different models under gradually increasing nuisance shifts. This enables the  identification of failure points (highlighted in red).
+          </p>
+        </div>
     </div>
   </div>
 </section>
@@ -134,7 +127,14 @@
         <h2 class="title is-3" style="color: #006c66;">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Finding correspondences between semantically similar points across images and object instances is one of the everlasting challenges in computer vision. While large pre-trained vision models have recently been demonstrated as effective priors for semantic matching, they still suffer from ambiguities for symmetric objects or repeated object parts. We propose to improve semantic correspondence estimation via 3D-aware pseudo-labeling. Specifically, we train an adapter to refine off-the-shelf features with pseudo-labels obtained via 3D-aware chaining, filtering wrong labels through relaxed cyclic consistency, and 3D spherical prototype mapping constraints. While reducing the need for dataset specific annotations compared to prior work, we set a new state-of-the-art on SPair-71k by over 4% absolute gain and by over 7% against methods with similar supervision requirements. The generality of our proposed approach simplifies extension of training to other data sources, which we demonstrate in our experiments. 
+            An important challenge when using computer vision models in the real world is to evaluate their performance in potential out-of-distribution (OOD) scenarios. 
+While simple synthetic corruptions are commonly applied to test OOD robustness, they mostly do not capture nuisance shifts that occur in the real world. 
+Recently, diffusion models have been applied to generate realistic images for benchmarking, but they are restricted to binary nuisance shifts.
+In this work, we introduce CNS-Bench, a Continuous Nuisance Shift Benchmark to quantify OOD robustness of image classifiers for continuous and realistic generative nuisance shifts.
+CNS-Bench allows generating a wide range of individual nuisance shifts in continuous severities by applying LoRA adapters to diffusion models. To remove failure cases, we propose a filtering mechanism that outperforms previous methods and hence enables a reliable benchmarking with generative models.
+With the proposed benchmark, we perform a large-scale study to evaluate the robustness of more than 40 classifiers under various nuisance shifts.
+Through carefully designed comparisons and analyses, we find that model rankings can change for varying shifts and shift scales, which cannot be captured when applying common binary shifts.
+Additionally, we show that evaluating the model performance on a continuous scale allows the identification of model failure points, providing a more nuanced understanding of model robustness. 
           </p>
         </div>
       </div>
@@ -144,18 +144,25 @@
   </div>
 </section>
 
+
 <section class="section">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-max-desktop">
-        <h2 class="title is-3" style="color: #006c66;">Method</h2>
-        <div class="content has-text-justified">
-            <img src="./assets/img/diysc/method-figure.png" alt="Description of the image" style="width: 100%;">
-          <p>
-            <b>Method overview.</b> We use azimuth information to sample image pairs for which higher zero-shot performance can be expected (1). We then chain the pairwise predictions to get correspondences for larger viewpoint changes, where we reject matches that do not fulfill a relaxed cyclic consistency constraint (2). We further filter pseudo-labels by rejecting pairs that cannot be mapped to a similar location on a 3D spherical prototype (3). Finally, we use the resulting pseudo-labels to train an adapter in a supervised manner (4).
-          </p>
+  <div class="container is-max-desktop"> 
+    <div class="columns is-centered"></div>
+      <div class="column is-full-width has-text-centered">
+        <h2 class="title is-3" style="color:#006c66;">Our Approach</h2>
+        <div class="content has-text-centered" style="margin-bottom: 2rem;">
+          <p>Our benchmark is the first that enables benchmarking w.r.t. realistic and continuous nuisance shifts, scalable with respect to the number of classes and shifts.</p>
+          <img src="./assets/img/cns/overview.png" alt="Overview." style="width: 40%; height: auto;">
         </div>
+        <div class="content has-text-centered" style="margin-bottom: 2rem;">
+          <p>ImageNet class-specific LoRA adapters are applied to an image, enabling a variety continuous nuisance shifts.</p>
+          <img src="./assets/img/cns/method.png" alt="Method generation." style="width: 60%; height: auto;">
         </div>
+        <div class="content has-text-centered">
+          <p>Out-of-class samples are filtered via an ensemble of filters.</p>
+          <img src="./assets/img/cns/filter.png" alt="Method filtering." style="width: 50%; height: auto;">
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -167,21 +174,19 @@
     <div class="columns is-centered">
       <div class="column is-full-width has-text-centered">
         
-        <h2 class="title is-3" style="color:#006c66;">Results</h2>
+        <h2 class="title is-3" style="color:#006c66;">Benchmarking Results</h2>
+
         <div class="content has-text-centered">
-          <img src="./assets/img/diysc/pck_results.png" alt="PCK results" style="width: 70%; height: auto;">
-          <p>
-            <b>Results for different PCK levels (per-image) on the SPair-71k and the AP-10k dataset.</b>
-          </p>
+          <p>Accuracy drops vary for different shifts and scales.</p>
+          <img src="./assets/img/cns/acc_drops.png" alt="Result plots." style="width: 100%; height: auto;">
         </div>
 
-      <h2 class="title is-3" style="color:#006c66;">Ablations</h2>
 
         <div class="content has-text-centered">
-          <img src="./assets/img/diysc/ablation.png" alt="Ablations" style="width: 70%; height: auto;">
           <p>
-            <b>Ablations on SPair-71k.</b> All introduced components bring a significant improvement.
+            Evaluation of model robustness via the average corruption error along three considered axes.
           </p>
+          <img src="./assets/img/cns/ce_results.png" alt="Model evaluation." style="width: 50%; height: auto;">
         </div>
 
         
@@ -191,23 +196,16 @@
 </section>
 
 
-
-
-
 <br>
 <br>
 <div class="container is-max-desktop content">
   <h2 class="title" style="color: #006c66;">Acknowledgments</h2>
-  Adam Kortylewski acknowledges support via his Emmy Noether Research Group funded by the German Research Foundation (DFG) under Grant No. 468670075. Thomas Wimmer is supported through the Max Planck ETH Center for Learning Systems.
+  Adam Kortylewski acknowledges support via his Emmy Noether Research Group funded by the German Research Foundation (DFG) under Grant No. 468670075.
 </div>
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title" style="color: #006c66;">BibTeX</h2>
-    <pre><code>@article{duenkel2025diysc,
-    title = {Do It Yourself: Learning Semantic Correspondence from Pseudo-Labels},
-    author = {D{\"u}nkel, Olaf and Wimmer, Thomas and Theobalt, Christian and Rupprecht, Christian and Kortylewski, Adam},
-    journal = {arXiv preprint arXiv:2506.05312},
-    year = {2025}
+    <pre><code>@article{
   }</code></pre>
   </div>
 </section>
