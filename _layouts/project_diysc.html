@@ -203,9 +203,58 @@
 
         <h2 class="title is-3" style="color:#006c66;">Quantitative Results</h2>
         <div class="content has-text-centered">
-          <img src="./assets/img/diysc/pck_results.png" alt="PCK results" style="width: 70%; height: auto;" loading="lazy">
-          <p>
-            <b>Results for different PCK levels (per-image) on the SPair-71k and the AP-10k dataset.</b>
+          <div style="overflow-x: auto; margin: 0 auto; max-width: 780px;">
+            <table class="table is-bordered is-hoverable is-fullwidth" style="font-size: 0.9rem; text-align: center;">
+              <thead>
+                <tr style="background: #006c66; color: white;">
+                  <th rowspan="2" style="color:white; text-align:left; vertical-align:middle;">Method</th>
+                  <th colspan="3" style="color:white; text-align:center;">SPair-71k</th>
+                  <th colspan="3" style="color:white; text-align:center;">AP-10k (PCK@0.1)</th>
+                </tr>
+                <tr style="background: #005050; color: white;">
+                  <th style="color:white; text-align:center;">@0.1</th>
+                  <th style="color:white; text-align:center;">@0.05</th>
+                  <th style="color:white; text-align:center;">@0.01</th>
+                  <th style="color:white; text-align:center;">I.S.</th>
+                  <th style="color:white; text-align:center;">C.S.</th>
+                  <th style="color:white; text-align:center;">C.F.</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr style="background: #f0f0f0;">
+                  <td colspan="7" style="text-align:left; font-size:0.8rem; color:#555; padding: 0.25rem 0.75rem; font-style:italic;">Zero-shot</td>
+                </tr>
+                <tr><td style="text-align:left;">SD + DINOv2</td><td>59.9</td><td>44.7</td><td>7.9</td><td>62.9</td><td>59.3</td><td>48.3</td></tr>
+                <tr><td style="text-align:left;">DistillDIFT* (U.S.)</td><td>60.8</td><td>45.4</td><td>8.0</td><td>—</td><td>—</td><td>—</td></tr>
+                <tr style="background: #f0f0f0;">
+                  <td colspan="7" style="text-align:left; font-size:0.8rem; color:#555; padding: 0.25rem 0.75rem; font-style:italic;">Weakly supervised</td>
+                </tr>
+                <tr><td style="text-align:left;">SphMap†</td><td>64.4</td><td>48.2</td><td>8.4</td><td>65.4</td><td>63.1</td><td>51.0</td></tr>
+                <tr><td style="text-align:left;">TLR</td><td>65.4</td><td>49.1</td><td><u>9.9</u></td><td>68.7</td><td>64.6</td><td>52.7</td></tr>
+                <tr><td style="text-align:left;">DistillDIFT* (W.S.)</td><td>65.3</td><td>49.8</td><td>8.9</td><td>—</td><td>—</td><td>—</td></tr>
+                <tr style="background: #e8f4f3;">
+                  <td style="text-align:left;"><strong>Ours</strong></td>
+                  <td><strong>71.6</strong></td><td><strong>53.8</strong></td><td><strong>10.1</strong></td>
+                  <td><u>70.6</u></td><td><u>69.1</u></td><td><u>57.8</u></td>
+                </tr>
+                <tr style="background: #e8f4f3;">
+                  <td style="text-align:left;"><strong>Ours</strong> (DINOv2 only)</td>
+                  <td><u>70.6</u></td><td><u>51.1</u></td><td>9.0</td>
+                  <td><strong>71.2</strong></td><td><strong>69.8</strong></td><td><strong>58.3</strong></td>
+                </tr>
+                <tr style="background: #f0f0f0;">
+                  <td colspan="7" style="text-align:left; font-size:0.8rem; color:#555; padding: 0.25rem 0.75rem; font-style:italic;">Fully supervised (upper bound)</td>
+                </tr>
+                <tr><td style="text-align:left;">TLR (sup)</td><td>82.9</td><td>72.6</td><td>21.6</td><td>70.1</td><td>68.3</td><td>58.4</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p style="font-size: 0.82rem; color: #666; margin-top: 0.5rem; text-align: left; max-width: 780px; margin-left: auto; margin-right: auto;">
+            PCK per image. <strong>Bold</strong> = best, <u>underlined</u> = second best among non-supervised methods.
+            AP-10k: intra-species (I.S.), cross-species (C.S.), cross-family (C.F.).
+            † SphMap evaluated with our 2-sphere configuration on ImageNet-3D.
+            * DistillDIFT uses dataset-specific keypoint label definitions.
+            DINOv2 only: adapter trained on DINOv2 features without SD.
           </p>
         </div>
 
@@ -283,7 +332,7 @@
     <div class="columns is-centered">
       <div class="column is-full-width has-text-centered">
         <h2 class="title is-3" style="color:#006c66;">Qualitative Comparison</h2>
-        <p style="margin-bottom: 1.5rem;">Four challenging SPair-71k examples where prior SOTA methods mostly fail. Green = correct match (within PCK@0.1 radius), red = incorrect.</p>
+        <p style="margin-bottom: 1.5rem;">Four challenging SPair-71k examples where prior SOTA methods mostly fail. Green = correct match, red = incorrect.</p>
         <div class="columns is-multiline">
           <div class="column is-half">
             <img src="./assets/img/diysc/bus__04103_cut.jpeg" alt="Qualitative comparison — bus" style="width: 100%; height: auto;" loading="lazy">
