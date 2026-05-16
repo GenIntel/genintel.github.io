@@ -2,10 +2,10 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <meta name="description" content="CNS-Bench: Benchmarking Image Classifier Robustness Under Continuous Nuisance Shift">
-  <meta name="keywords" content="Keywords">
+  <meta name="description" content="CNS-Bench: Benchmarking Image Classifier Robustness Under Continuous Nuisance Shifts">
+  <meta name="keywords" content="CNS-Bench, Benchmarking, Image Classifier, Robustness, Continuous Nuisance Shifts">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>CNS</title>
+  <title>CNS-Bench</title>
 
   <link rel="stylesheet" href="assets/css/bulma.min.css">
   <link rel="stylesheet" href="assets/css/bulma-carousel.min.css">
@@ -32,9 +32,9 @@
         <div class="column has-text-centered">
           <h1 class="title is-1 publication-title">CNS-Bench: Benchmarking Image Classifier Robustness Under Continuous Nuisance Shifts</h1>
 
-          <!-- <div class="title is-3">
-            <strong>arXiv 2024</strong>
-          </div> -->
+          <div class="title is-3">
+            <strong>ICCV 2025</strong>
+          </div>
 
           <div class="is-size-5 publication-authors">
             <span class="author-block">
@@ -53,7 +53,7 @@
           </div>
 
           <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup>1</sup>Max Planck Institute for Informatics, <sup>2</sup>University of Freiburg</span>, <sup>3</sup>University of Oxford</span>
+            <span class="author-block"><sup>1</sup>Max Planck Institute for Informatics, <sup>2</sup>University of Freiburg, <sup>3</sup>University of Oxford</span>
           </div>
 
           <div class="column has-text-centered">
@@ -109,9 +109,9 @@
   <div class="container is-max-desktop" style="width: 70%;">
     <div class="hero-body" style="padding-bottom: 2rem; padding-top: 2rem;">
       <div class="content has-text-justified">
-            <video src="./assets/videos/cns/teaser.mp4" controls autoplay muted style="width: 100%;" alt="CNS teaser video"></video>
+            <video src="./assets/videos/cns/teaser.mp4" controls autoplay muted loop style="width: 100%;" alt="CNS teaser video"></video>
           <p>
-            We evaluate the robustness of different models under gradually increasing nuisance shifts. This enables the  identification of failure points (highlighted in red).
+            We evaluate the robustness of different models under gradually increasing nuisance shifts. A <em>failure point</em> is the smallest shift severity at which a model first misclassifies an image (highlighted in red). The distribution of failure points reveals whether models degrade gradually or abruptly.
           </p>
         </div>
     </div>
@@ -119,7 +119,7 @@
 </section>
   
 
-<section class="section" style="padding-top: 3rem;">
+<section class="section" id="abstract" style="padding-top: 3rem;">
   <div class="container is-max-desktop">
     <!-- Abstract. -->
     <div class="columns is-centered has-text-centered">
@@ -145,22 +145,22 @@ Additionally, we show that evaluating the model performance on a continuous scal
 </section>
 
 
-<section class="section">
-  <div class="container is-max-desktop"> 
-    <div class="columns is-centered"></div>
+<section class="section" id="method">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
       <div class="column is-full-width has-text-centered">
         <h2 class="title is-3" style="color:#006c66;">Our Approach</h2>
         <div class="content has-text-centered" style="margin-bottom: 2rem;">
-          <p>Our benchmark is the first that enables benchmarking w.r.t. realistic and continuous nuisance shifts, scalable with respect to the number of classes and shifts.</p>
-          <img src="./assets/img/cns/overview.svg" alt="Overview." style="width: 60%; height: auto;">
+          <p>CNS-Bench is the first benchmark enabling robustness evaluation w.r.t. realistic and <em>continuous</em> nuisance shifts, scalable to any number of classes and shifts. It covers <strong>14 diverse shifts</strong> across 100 ImageNet classes (200k images at 5 severity levels).</p>
+          <img src="./assets/img/cns/overview.svg" alt="Overview." style="width: 60%; height: auto;" loading="lazy">
         </div>
         <div class="content has-text-centered" style="margin-bottom: 2rem;">
-          <p>ImageNet class-specific LoRA adapters are applied to an image, enabling a variety of continuous nuisance shifts.</p>
-          <img src="./assets/img/cns/method.png" alt="Method generation." style="width: 60%; height: auto;">
+          <p>ImageNet class-specific LoRA adapters are applied to a diffusion model, continuously modulating nuisance intensity. To close the distribution gap between diffusion-generated images and ImageNet, we apply textual inversion to learn class-specific embeddings and adapters.</p>
+          <img src="./assets/img/cns/method.png" alt="Method generation." style="width: 60%; height: auto;" loading="lazy">
         </div>
         <div class="content has-text-centered">
-          <p>Out-of-class samples are filtered via an ensemble of filters.</p>
-          <img src="./assets/img/cns/filter.png" alt="Method filtering." style="width: 60%; height: auto;">
+          <p>Out-of-class samples are filtered via an ensemble of four filters: two text-alignment scores (CLIP with base and shifted prompts) and two image-feature similarity scores (CLIP and DINOv2 CLS token), calibrated on a human-annotated dataset. Our filter achieves substantially larger filter accuracy than previous CLIP-based strategies.</p>
+          <img src="./assets/img/cns/filter.png" alt="Method filtering." style="width: 60%; height: auto;" loading="lazy">
         </div>
       </div>
     </div>
@@ -169,42 +169,50 @@ Additionally, we show that evaluating the model performance on a continuous scal
 
 
 
-<section class="section">
-  <div class="container is-max-desktop"> 
+<section class="section" id="results">
+  <div class="container is-max-desktop">
     <div class="columns is-centered">
       <div class="column is-full-width has-text-centered">
-        
+
         <h2 class="title is-3" style="color:#006c66;">Benchmarking Results</h2>
 
         <div class="content has-text-centered">
-          <p>Accuracy drops and rankings can vary for different shifts and scales.</p>
-          <img src="./assets/img/cns/acc_drops.png" alt="Result plots." style="width: 100%; height: auto;">
+          <p>Accuracy drops and model rankings vary across shifts and scales — e.g., ViT outperforms other architectures at low painting-style scales but performs worse at high scales. This shift-and-scale dependence cannot be captured by single-point binary evaluations.</p>
+          <img src="./assets/img/cns/acc_drops.png" alt="Result plots." style="width: 100%; height: auto;" loading="lazy">
         </div>
-
 
         <div class="content has-text-centered">
           <p>
-            Evaluation of model robustness: Average corruption error along three benchmarked axes.
+            Average relative corruption error (rCE, lower is better) along three axes: <strong>(i) architecture</strong>, <strong>(ii) model size</strong>, and <strong>(iii) pre-training paradigm and data</strong>.
           </p>
-          <img src="./assets/img/cns/ce_results.svg" alt="Model evaluation." style="width: 60%; height: auto;">
+          <img src="./assets/img/cns/ce_results.svg" alt="Model evaluation." style="width: 60%; height: auto;" loading="lazy">
         </div>
 
-        
+        <div class="content has-text-justified" style="max-width: 800px; margin: 2rem auto 0;">
+          <h3 class="title is-5" style="color: #006c66; text-align: center;">Key Findings</h3>
+          <ul>
+            <li><strong>Visual state-space models are most robust.</strong> VMamba achieves the lowest rCE among architectures with comparable parameters and training data, outperforming DeiT3, ConvNeXt, ResNet-152, and ViT.</li>
+            <li><strong>Self-supervised pre-training beats supervised pre-training.</strong> DINOv1 fine-tuned on IN1k outperforms a fine-tuned model that was pre-trained on the larger IN21k in a supervised manner, despite using less training data.</li>
+            <li><strong>Diffusion classifiers are less robust than discriminative models</strong>, and the gap widens with higher shift severity.</li>
+            <li><strong>Model failure points differ across shift types.</strong> Weather shifts (e.g., snow) cause gradual failure accumulation, while style shifts (e.g., cartoon) cause abrupt failure clusters at a specific scale — a distinction invisible to binary benchmarks.</li>
+          </ul>
+        </div>
+
       </div>
     </div>
   </div>
 </section>
 
 
-<br>
-<br>
-<div class="container is-max-desktop content">
-  <h2 class="title" style="color: #006c66;">Acknowledgments</h2>
-  Adam Kortylewski acknowledges support via his Emmy Noether Research Group funded by the German Research Foundation (DFG) under Grant No. 468670075.
-</div>
+<section class="section" style="padding-bottom: 0;">
+  <div class="container is-max-desktop content">
+    <h2 class="title is-3" style="color: #006c66;">Acknowledgments</h2>
+    <p>Adam Kortylewski acknowledges support via his Emmy Noether Research Group funded by the German Research Foundation (DFG) under Grant No. 468670075.</p>
+  </div>
+</section>
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
-    <h2 class="title" style="color: #006c66;">BibTeX</h2>
+    <h2 class="title is-3" style="color: #006c66;">BibTeX</h2>
     <pre><code>@inproceedings{duenkel2025cns,
     title = {CNS-Bench: Benchmarking Image Classifier Robustness Under Continuous Nuisance Shifts},
     author = {D{\"u}nkel, Olaf and Jesslen, Artur and Xie, Jiaohao and Theobalt, Christian and Rupprecht, Christian and Kortylewski, Adam},
