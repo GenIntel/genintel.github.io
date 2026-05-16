@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="description" content="Do It Yourself: Learning Semantic Correspondence from Pseudo-Labels">
-  <meta name="keywords" content="Keywords">
+  <meta name="keywords" content="DIY-SC, Semantic Correspondence, Pseudo-Labels, 3D-aware, Computer Vision">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>DIY-SC</title>
 
@@ -21,6 +21,23 @@
   <script src="assets/js/bulma-carousel.min.js"></script>
   <script src="assets/js/bulma-slider.min.js"></script>
   <script src="assets/js/projects.js"></script>
+
+  <!-- Academic citation metadata (Google Scholar, Semantic Scholar, etc.) -->
+  <meta name="citation_title" content="Do It Yourself: Learning Semantic Correspondence from Pseudo-Labels">
+  <meta name="citation_author" content="Dünkel, Olaf">
+  <meta name="citation_author" content="Wimmer, Thomas">
+  <meta name="citation_author" content="Theobalt, Christian">
+  <meta name="citation_author" content="Rupprecht, Christian">
+  <meta name="citation_author" content="Kortylewski, Adam">
+  <meta name="citation_publication_date" content="2025">
+  <meta name="citation_conference_title" content="International Conference on Computer Vision (ICCV)">
+  <meta name="citation_arxiv_id" content="2506.05312">
+
+  <style>
+    a { color: #006c66; }
+    a:hover { color: #004d48; }
+    .publication-links a { color: inherit; }
+  </style>
 </head>
 <body>
 
@@ -32,9 +49,9 @@
         <div class="column has-text-centered">
           <h1 class="title is-1 publication-title">Do It Yourself: Learning Semantic Correspondence from Pseudo-Labels</h1>
 
-          <!-- <div class="title is-3">
-            <strong>arXiv 2024</strong>
-          </div> -->
+          <div class="title is-3">
+            <strong>ICCV 2025</strong>
+          </div>
 
           <div class="is-size-5 publication-authors">
             <span class="author-block">
@@ -57,9 +74,8 @@
 
           <div class="column has-text-centered">
             <div class="publication-links">
-              <!-- PDF Link. FIXME Put arxiv-->
               <span class="link-block">
-                <a href="http://arxiv.org/pdf/2506.05312"
+                <a href="https://arxiv.org/pdf/2506.05312"
                    class="external-link button is-normal is-rounded is-dark" target="_blank">
                   <span class="icon">
                     <i class="fas fa-file-pdf"></i>
@@ -68,7 +84,7 @@
                 </a>
               </span>
               <span class="link-block">
-                <a href="http://arxiv.org/abs/2506.05312"
+                <a href="https://arxiv.org/abs/2506.05312"
                    class="external-link button is-normal is-rounded is-dark" target="_blank">
                   <span class="icon">
                       <i class="ai ai-arxiv"></i>
@@ -109,10 +125,10 @@
         <table style="width: 100%; text-align: center;">
           <tr>
             <td>
-              <img src="./assets/img/diysc/teaser-3.png" alt="Teaser qualitative" style="width: 100%; height: auto;">
+              <img src="./assets/img/diysc/teaser-3.png" alt="Teaser qualitative" style="width: 100%; height: auto;" loading="lazy">
             </td>
             <td>
-              <img src="./assets/img/diysc/method-simple2.png" alt="Method simple" style="width: 100%; height: auto;">
+              <img src="./assets/img/diysc/method-simple2.png" alt="Method simple" style="width: 100%; height: auto;" loading="lazy">
             </td>
           </tr>
           <tr>
@@ -124,9 +140,27 @@
     </div>
   </div>
 </section>
-  
 
-<section class="section" style="padding-top: 3rem;">
+
+<section class="section" id="demo" style="padding-top: 2rem; padding-bottom: 2rem; background: #f5f5f5;">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3" style="color: #006c66;">Interactive Demo</h2>
+        <p style="margin-bottom: 1rem;">Try DIY-SC directly in your browser — upload two images and explore semantic correspondences.</p>
+        <iframe
+          src="https://odunkel-diy-sc.hf.space"
+          frameborder="0"
+          width="100%"
+          height="600"
+          style="border-radius: 8px;"
+        ></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="abstract" style="padding-top: 3rem;">
   <div class="container is-max-desktop">
     <!-- Abstract. -->
     <div class="columns is-centered has-text-centered">
@@ -134,7 +168,7 @@
         <h2 class="title is-3" style="color: #006c66;">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Finding correspondences between semantically similar points across images and object instances is one of the everlasting challenges in computer vision. While large pre-trained vision models have recently been demonstrated as effective priors for semantic matching, they still suffer from ambiguities for symmetric objects or repeated object parts. We propose to improve semantic correspondence estimation via 3D-aware pseudo-labeling. Specifically, we train an adapter to refine off-the-shelf features with pseudo-labels obtained via 3D-aware chaining, filtering wrong labels through relaxed cyclic consistency, and 3D spherical prototype mapping constraints. While reducing the need for dataset specific annotations compared to prior work, we set a new state-of-the-art on SPair-71k by over 4% absolute gain and by over 7% against methods with similar supervision requirements. The generality of our proposed approach simplifies extension of training to other data sources, which we demonstrate in our experiments. 
+            Finding correspondences between semantically similar points across images and object instances is one of the everlasting challenges in computer vision. While large pre-trained vision models have recently been demonstrated as effective priors for semantic matching, they still suffer from ambiguities for symmetric objects or repeated object parts. We propose to improve semantic correspondence estimation via 3D-aware pseudo-labeling. Specifically, we train an adapter to refine off-the-shelf features with pseudo-labels obtained via 3D-aware chaining, filtering wrong labels through relaxed cyclic consistency, and 3D spherical prototype mapping constraints. While reducing the need for dataset specific annotations compared to prior work, we set a new state-of-the-art on SPair-71k by over 4% absolute gain and by over 7% against methods with similar supervision requirements. The generality of our proposed approach simplifies extension of training to other data sources, which we demonstrate in our experiments.
           </p>
         </div>
       </div>
@@ -144,15 +178,16 @@
   </div>
 </section>
 
-<section class="section">
+<section class="section" id="method">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-max-desktop">
         <h2 class="title is-3" style="color: #006c66;">Method</h2>
         <div class="content has-text-justified">
-            <img src="./assets/img/diysc/method-figure.png" alt="Description of the image" style="width: 100%;">
+            <img src="./assets/img/diysc/method-figure.png" alt="Method overview." style="width: 100%;" loading="lazy">
           <p>
             <b>Method overview.</b> We use azimuth information to sample image pairs for which higher zero-shot performance can be expected (1). We then chain the pairwise predictions to get correspondences for larger viewpoint changes, where we reject matches that do not fulfill a relaxed cyclic consistency constraint (2). We further filter pseudo-labels by rejecting pairs that cannot be mapped to a similar location on a 3D spherical prototype (3). Finally, we use the resulting pseudo-labels to train an adapter in a supervised manner (4).
+            This approach does not require keypoint annotations and is, therefore, easily scalable to larger datasets, which we demonstrate by pre-training on ImageNet-3D and fine-tuning on SPair-71k.
           </p>
         </div>
         </div>
@@ -161,14 +196,14 @@
 </section>
 
 
-<section class="section">
-  <div class="container is-max-desktop"> 
+<section class="section" id="results">
+  <div class="container is-max-desktop">
     <div class="columns is-centered">
       <div class="column is-full-width has-text-centered">
-        
+
         <h2 class="title is-3" style="color:#006c66;">Quantitative Results</h2>
         <div class="content has-text-centered">
-          <img src="./assets/img/diysc/pck_results.png" alt="PCK results" style="width: 70%; height: auto;">
+          <img src="./assets/img/diysc/pck_results.png" alt="PCK results" style="width: 70%; height: auto;" loading="lazy">
           <p>
             <b>Results for different PCK levels (per-image) on the SPair-71k and the AP-10k dataset.</b>
           </p>
@@ -177,13 +212,97 @@
       <h2 class="title is-3" style="color:#006c66;">Ablations</h2>
 
         <div class="content has-text-centered">
-          <img src="./assets/img/diysc/ablation.png" alt="Ablations" style="width: 70%; height: auto;">
-          <p>
-            <b>Ablations on SPair-71k.</b>
-          </p>
+          <p><b>Ablations on SPair-71k.</b> Each component brings a significant improvement; the baseline is the SD+DINOv2 zero-shot approach.</p>
+          <div style="overflow-x: auto; margin: 0 auto; max-width: 680px;">
+            <table class="table is-bordered is-striped is-hoverable is-fullwidth" style="font-size: 0.92rem; text-align: center;">
+              <thead>
+                <tr style="background: #006c66; color: white;">
+                  <th style="color:white; text-align:center;">Pseudo-labels</th>
+                  <th style="color:white; text-align:center;">Cyc. cons.</th>
+                  <th style="color:white; text-align:center;">Relaxed c.c.</th>
+                  <th style="color:white; text-align:center;">Chaining</th>
+                  <th style="color:white; text-align:center;">Sph. rej.</th>
+                  <th style="color:white; text-align:center;">PCK@0.1</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td></td><td></td><td></td><td></td><td></td><td>65.0</td></tr>
+                <tr><td>✓</td><td></td><td></td><td></td><td></td><td>67.2</td></tr>
+                <tr><td>✓</td><td>✓</td><td></td><td></td><td></td><td>66.9</td></tr>
+                <tr><td>✓</td><td></td><td>✓</td><td></td><td></td><td>68.4</td></tr>
+                <tr><td>✓</td><td></td><td>✓</td><td>✓</td><td></td><td>70.0</td></tr>
+                <tr><td>✓</td><td></td><td></td><td></td><td>✓</td><td>72.9</td></tr>
+                <tr style="font-weight: bold;"><td>✓</td><td></td><td>✓</td><td>✓</td><td>✓</td><td>74.4</td></tr>
+              </tbody>
+            </table>
+          </div>
         </div>
 
-        
+        <h2 class="title is-3" style="color:#006c66; margin-top: 2rem;">Scaling to ImageNet-3D</h2>
+        <div class="content has-text-centered">
+          <p>Pre-training on ImageNet-3D (86k images) and fine-tuning on SPair-71k further boosts performance, demonstrating the scalability of the weakly-supervised training strategy.</p>
+          <div style="overflow-x: auto; margin: 0 auto; max-width: 680px;">
+            <table class="table is-bordered is-striped is-hoverable is-fullwidth" style="font-size: 0.92rem; text-align: center;">
+              <thead>
+                <tr style="background: #006c66; color: white;">
+                  <th style="color:white; text-align:center;">Model</th>
+                  <th style="color:white; text-align:center;">SPair-71k</th>
+                  <th style="color:white; text-align:center;">AP-10k I.S.</th>
+                  <th style="color:white; text-align:center;">AP-10k C.S.</th>
+                  <th style="color:white; text-align:center;">AP-10k C.F.</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>Ours (SPair)</td><td>71.6</td><td>70.6</td><td>69.1</td><td>57.8</td></tr>
+                <tr><td>Ours (IN3D)</td><td>68.0</td><td>67.8</td><td>65.8</td><td>53.3</td></tr>
+                <tr style="font-weight: bold;"><td>Ours (IN3D → SPair)</td><td>72.2</td><td>71.1</td><td>69.4</td><td>58.1</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p style="font-size: 0.85rem; color: #666;">PCK@0.1 per image. AP-10k splits: intra-species (I.S.), cross-species (C.S.), cross-family (C.F.).</p>
+        </div>
+
+        <div class="content has-text-justified" style="max-width: 800px; margin: 2rem auto 0;">
+          <h3 class="title is-5" style="color: #006c66; text-align: center;">Key Findings</h3>
+          <ul>
+            <li><strong>New state-of-the-art on SPair-71k.</strong> DIY-SC achieves +4.5pp absolute gain over the previous best, and +7pp over methods with comparable supervision requirements.</li>
+            <li><strong>Strongest gains on symmetric and repeated-part objects.</strong> Categories like Bus (+15.7pp) and Car (+14.0pp) benefit most, where prior methods fail due to left-right ambiguities.</li>
+            <li><strong>Generalizes out-of-the-box to unseen datasets.</strong> Without any training on AP-10k, DIY-SC outperforms competing methods on intra-, cross-species, and cross-family splits.</li>
+            <li><strong>Scalable to larger data sources.</strong> Pre-training on ImageNet-3D further improves SPair-71k performance, demonstrating the method's scalability beyond CO3D.</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section" id="qualitative">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full-width has-text-centered">
+        <h2 class="title is-3" style="color:#006c66;">Qualitative Comparison</h2>
+        <p style="margin-bottom: 1.5rem;">Four challenging SPair-71k examples where prior SOTA methods mostly fail. Green = correct match (within PCK@0.1 radius), red = incorrect.</p>
+        <div class="columns is-multiline">
+          <div class="column is-half">
+            <img src="./assets/img/diysc/bus__04103_cut.jpeg" alt="Qualitative comparison — bus" style="width: 100%; height: auto;" loading="lazy">
+            <p style="font-size: 0.9rem; margin-top: 0.5rem;"><b>Bus.</b> Appearance change, repeated object parts.</p>
+          </div>
+          <div class="column is-half">
+            <img src="./assets/img/diysc/car__04753_cut.jpeg" alt="Qualitative comparison — car" style="width: 100%; height: auto;" loading="lazy">
+            <p style="font-size: 0.9rem; margin-top: 0.5rem;"><b>Car.</b> Appearance change, repeated parts, viewpoint change.</p>
+          </div>
+          <div class="column is-half">
+            <img src="./assets/img/diysc/motorbike__08175_cut.jpeg" alt="Qualitative comparison — motorbike" style="width: 100%; height: auto;" loading="lazy">
+            <p style="font-size: 0.9rem; margin-top: 0.5rem;"><b>Motorbike.</b> Viewpoint change, feature ambiguity in background.</p>
+          </div>
+          <div class="column is-half">
+            <img src="./assets/img/diysc/person__09210_cut.jpeg" alt="Qualitative comparison — person" style="width: 100%; height: auto;" loading="lazy">
+            <p style="font-size: 0.9rem; margin-top: 0.5rem;"><b>Person.</b> Left-right ambiguity, semantically similar categories.</p>
+          </div>
+        </div>
+        <p style="font-size: 0.85rem; color: #666;">Columns (left to right): SphMap, TLR, DistillDIFT (W.S.), Ours.</p>
       </div>
     </div>
   </div>
@@ -193,7 +312,7 @@
 
 <section class="section">
   <div class="container is-max-desktop has-text-centered">
-    <h2 class="title is-3" style="color: #006c66;">Visualizations</h2>
+    <h2 class="title is-3" style="color: #006c66;">Animated Visualizations</h2>
     <div>
       <img src="./assets/img/diysc/umap_side_by_side_v7.gif" alt="UMAP side by side" style="width: 70%; height: auto;" loop autoplay>
       <p>
@@ -204,7 +323,7 @@
     <div>
       <img src="./assets/img/diysc/heatmap_side_by_side_v8_cat.gif" alt="Heatmap side by side" style="width: 70%; height: auto;" loop autoplay>
       <p>
-        <b>Exemplary tracking.</b> Refining DINOv2 features with DIY-SC adapter results in more stable tracking.
+        <b>Exemplary tracking.</b> DIY-SC-refined features result in more stable tracking compared to DINOv2.
       </p>
     </div>
   </div>
@@ -212,19 +331,19 @@
 
 
 
-<br>
-<br>
-<div class="container is-max-desktop content">
-  <h2 class="title" style="color: #006c66;">Acknowledgments</h2>
-  Adam Kortylewski acknowledges support via his Emmy Noether Research Group funded by the German Research Foundation (DFG) under Grant No. 468670075. Thomas Wimmer is supported through the Max Planck ETH Center for Learning Systems.
-</div>
+<section class="section" style="padding-bottom: 0;">
+  <div class="container is-max-desktop content">
+    <h2 class="title is-3" style="color: #006c66;">Acknowledgments</h2>
+    <p>Adam Kortylewski acknowledges support via his Emmy Noether Research Group funded by the German Research Foundation (DFG) under Grant No. 468670075. Thomas Wimmer is supported through the Max Planck ETH Center for Learning Systems.</p>
+  </div>
+</section>
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
-    <h2 class="title" style="color: #006c66;">BibTeX</h2>
-    <pre><code>@article{duenkel2025diysc,
+    <h2 class="title is-3" style="color: #006c66;">BibTeX</h2>
+    <pre><code>@inproceedings{duenkel2025diysc,
     title = {Do It Yourself: Learning Semantic Correspondence from Pseudo-Labels},
     author = {D{\"u}nkel, Olaf and Wimmer, Thomas and Theobalt, Christian and Rupprecht, Christian and Kortylewski, Adam},
-    journal = {arXiv preprint arXiv:2506.05312},
+    booktitle = {ICCV},
     year = {2025}
   }</code></pre>
   </div>
